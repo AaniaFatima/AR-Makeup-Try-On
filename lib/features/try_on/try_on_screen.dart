@@ -851,6 +851,54 @@ class _TryOnScreenState extends State<TryOnScreen> with WidgetsBindingObserver {
                                       ),
                                     ),
                                   ),
+
+                                  // No face detected overlay
+                                  ValueListenableBuilder(
+                                    valueListenable: _facesNotifier,
+                                    builder: (_, faces, __) =>
+                                        AnimatedOpacity(
+                                          opacity: faces.isEmpty ? 1.0 : 0.0,
+                                          duration: const Duration(milliseconds: 400),
+                                          child: IgnorePointer(
+                                            child: Align(
+                                              alignment: const Alignment(0, -0.35),
+                                              child: Container(
+                                                padding: const EdgeInsets.symmetric(
+                                                  horizontal: 18,
+                                                  vertical: 10,
+                                                ),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.black.withOpacity(0.45),
+                                                  borderRadius: BorderRadius.circular(30),
+                                                  border: Border.all(
+                                                    color: Colors.white.withOpacity(0.15),
+                                                  ),
+                                                ),
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    Icon(
+                                                      Icons.face_retouching_off_outlined,
+                                                      color: Colors.white.withOpacity(0.75),
+                                                      size: 16,
+                                                    ),
+                                                    const SizedBox(width: 8),
+                                                    Text(
+                                                      'Point camera at your face',
+                                                      style: TextStyle(
+                                                        color: Colors.white.withOpacity(0.85),
+                                                        fontSize: 13,
+                                                        fontWeight: FontWeight.w500,
+                                                        letterSpacing: 0.2,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                  ),
                                   // Positioned(
                                   //   top: 80,
                                   //   left: 12,
