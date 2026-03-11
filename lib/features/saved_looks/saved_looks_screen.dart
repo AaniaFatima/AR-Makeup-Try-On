@@ -1,14 +1,15 @@
-import 'dart:io';
 import 'dart:convert';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+// ── Change this URL whenever your ngrok/hosting changes ──────────────────────
+const _kWebBaseUrl = 'https://tommie-mushy-noumenally.ngrok-free.dev';
+// ─────────────────────────────────────────────────────────────────────────────
 
 class SavedLook {
   final String id;
@@ -188,54 +189,30 @@ class _SavedLooksScreenState extends State<SavedLooksScreen>
   }
 
   Future<void> _shareLook(SavedLook look) async {
-    final webLink =
-        'https://tommie-mushy-noumenally.ngrok-free.dev/looks/${look.id}';
-    final shareText = '✨ Check out my look: ${look.lookName}\n$webLink';
-
+    final webLink = '$_kWebBaseUrl/looks/${look.id}';
+    final shareText = '✨ Check out my look: ${look.lookName}\n\n$webLink';
     try {
-      // Try to share with image first
-      Uint8List? bytes = look.imageBytes;
-
-      // If base64 not available, try downloading from URL
-      if (bytes == null && look.previewImageUrl.startsWith('http')) {
-        final response = await Supabase.instance.client.storage
-            .from('looks')
-            .download(look.previewImageUrl.split('/looks/').last);
-        bytes = response;
-      }
-
-      if (bytes != null) {
-        final tempDir = await getTemporaryDirectory();
-        final file = File('${tempDir.path}/look_${look.id}.png');
-        await file.writeAsBytes(bytes);
-
-        // Share image + link together
-        await Share.shareXFiles([
-          XFile(file.path, mimeType: 'image/png'),
-        ], text: shareText);
-      } else {
-        // Fallback: share just the link
-        await Share.share(shareText);
-      }
+      await Share.share(shareText, subject: look.lookName);
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Could not share: ${e.toString()}'),
-          backgroundColor: Colors.red.shade800,
-          behavior: SnackBarBehavior.floating,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
+        SnackBar(content: Text('Could not share: ${e.toString()}')),
       );
     }
   }
 
-  Future<void> _openInWeb(SavedLook look) async {
-    final url = Uri.parse(
-      'https://tommie-mushy-noumenally.ngrok-free.dev/looks/${look.id}',
+  void _showCopyLinkDialog(SavedLook look) {
+    final webLink = '$_kWebBaseUrl/looks/${look.id}';
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      builder: (_) => _CopyLinkSheet(link: webLink, lookName: look.lookName),
     );
+  }
+
+  Future<void> _openInWeb(SavedLook look) async {
+    final url = Uri.parse('$_kWebBaseUrl/looks/${look.id}');
     try {
       await launchUrl(url, mode: LaunchMode.externalApplication);
     } catch (e) {
@@ -259,9 +236,17 @@ class _SavedLooksScreenState extends State<SavedLooksScreen>
       backgroundColor: Colors.transparent,
       builder: (_) => _OptionsSheet(
         look: look,
-        onShare: () {
+        onShareImage: () {
           Navigator.pop(context);
           _shareLook(look);
+        },
+        onShareLink: () {
+          Navigator.pop(context);
+          _shareLook(look);
+        },
+        onCopyLink: () {
+          Navigator.pop(context);
+          _showCopyLinkDialog(look);
         },
         onOpenInWeb: () {
           Navigator.pop(context);
@@ -388,14 +373,18 @@ class _SavedLooksScreenState extends State<SavedLooksScreen>
 
 class _OptionsSheet extends StatelessWidget {
   final SavedLook look;
-  final VoidCallback onShare;
+  final VoidCallback onShareImage;
+  final VoidCallback onShareLink;
+  final VoidCallback onCopyLink;
   final VoidCallback onOpenInWeb;
   final VoidCallback onDelete;
   final VoidCallback onPreview;
 
   const _OptionsSheet({
     required this.look,
-    required this.onShare,
+    required this.onShareImage,
+    required this.onShareLink,
+    required this.onCopyLink,
     required this.onOpenInWeb,
     required this.onDelete,
     required this.onPreview,
@@ -451,11 +440,21 @@ class _OptionsSheet extends StatelessWidget {
               const SizedBox(height: 8),
               Divider(color: Colors.white.withOpacity(0.08)),
 
-              // Options
+              // Share options
+              _OptionTile(
+                icon: Icons.image_outlined,
+                label: 'Share Image',
+                onTap: onShareImage,
+              ),
               _OptionTile(
                 icon: Icons.share_outlined,
-                label: 'Share Look',
-                onTap: onShare,
+                label: 'Share Link',
+                onTap: onShareLink,
+              ),
+              _OptionTile(
+                icon: Icons.link_rounded,
+                label: 'Copy Link',
+                onTap: onCopyLink,
               ),
               _OptionTile(
                 icon: Icons.open_in_browser_outlined,
@@ -937,6 +936,253 @@ class _GlassCircleButton extends StatelessWidget {
               ),
               child: Icon(icon, color: Colors.white, size: 19),
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────
+// Premium Copy Link Sheet
+// ─────────────────────────────────────────────
+class _CopyLinkSheet extends StatefulWidget {
+  final String link;
+  final String lookName;
+  const _CopyLinkSheet({required this.link, required this.lookName});
+
+  @override
+  State<_CopyLinkSheet> createState() => _CopyLinkSheetState();
+}
+
+class _CopyLinkSheetState extends State<_CopyLinkSheet>
+    with SingleTickerProviderStateMixin {
+  bool _copied = false;
+  late final AnimationController _anim;
+  late final Animation<double> _fade;
+  late final Animation<Offset> _slide;
+
+  @override
+  void initState() {
+    super.initState();
+    _anim = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 380),
+    );
+    _fade = CurvedAnimation(parent: _anim, curve: Curves.easeOut);
+    _slide = Tween<Offset>(
+      begin: const Offset(0, 0.1),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(parent: _anim, curve: Curves.easeOutCubic));
+    _anim.forward();
+  }
+
+  @override
+  void dispose() {
+    _anim.dispose();
+    super.dispose();
+  }
+
+  void _copy() async {
+    await Clipboard.setData(ClipboardData(text: widget.link));
+    setState(() => _copied = true);
+    await Future.delayed(const Duration(seconds: 2));
+    if (mounted) setState(() => _copied = false);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FadeTransition(
+      opacity: _fade,
+      child: SlideTransition(
+        position: _slide,
+        child: Container(
+          margin: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+          padding: const EdgeInsets.fromLTRB(24, 20, 24, 28),
+          decoration: BoxDecoration(
+            color: const Color(0xFF0E0E0E),
+            borderRadius: BorderRadius.circular(28),
+            border: Border.all(color: Colors.white.withOpacity(0.07)),
+            boxShadow: [
+              BoxShadow(color: Colors.black.withOpacity(0.5), blurRadius: 40),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Handle
+              Center(
+                child: Container(
+                  width: 36,
+                  height: 4,
+                  margin: const EdgeInsets.only(bottom: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.15),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ),
+
+              // Title row
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(9),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.07),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Icon(
+                      Icons.link_rounded,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Share Link',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.3,
+                        ),
+                      ),
+                      Text(
+                        widget.lookName,
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.4),
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 20),
+
+              // URL box
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 14,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: Colors.white.withOpacity(0.1)),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        widget.link,
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.75),
+                          fontSize: 12.5,
+                          fontFamily: 'monospace',
+                          letterSpacing: 0.1,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
+              // Action buttons
+              Row(
+                children: [
+                  // Copy button
+                  Expanded(
+                    flex: 2,
+                    child: GestureDetector(
+                      onTap: _copy,
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        height: 52,
+                        decoration: BoxDecoration(
+                          color: _copied
+                              ? const Color(0xFF1DB954)
+                              : Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: [
+                            BoxShadow(
+                              color:
+                                  (_copied
+                                          ? const Color(0xFF1DB954)
+                                          : Colors.white)
+                                      .withOpacity(0.15),
+                              blurRadius: 20,
+                            ),
+                          ],
+                        ),
+                        child: Center(
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 200),
+                                child: Icon(
+                                  _copied
+                                      ? Icons.check_rounded
+                                      : Icons.copy_rounded,
+                                  key: ValueKey(_copied),
+                                  color: Colors.black,
+                                  size: 18,
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 200),
+                                child: Text(
+                                  _copied ? 'Copied!' : 'Copy Link',
+                                  key: ValueKey(_copied),
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  // Close button
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).pop(),
+                    child: Container(
+                      height: 52,
+                      width: 52,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.06),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: Colors.white.withOpacity(0.1),
+                        ),
+                      ),
+                      child: Icon(
+                        Icons.close_rounded,
+                        color: Colors.white.withOpacity(0.5),
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

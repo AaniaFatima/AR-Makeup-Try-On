@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class MakeupPainter extends CustomPainter {
   final List<List<Map<String, double>>> faces;
@@ -187,14 +188,13 @@ class MakeupPainter extends CustomPainter {
     const innerUpperLip = [78, 191, 80, 81, 82, 13, 312, 311, 310, 415, 308];
     const innerLowerLip = [78, 95, 88, 178, 87, 14, 317, 402, 318, 324, 308];
 
+    // expandCornersOnly aur upperLiftPx ko hata diya gaya hai taake lipstick hawa mein na uday
     final outer = _closedLipPath(
       face,
       size,
       isFrontCamera,
       upper: outerUpperLip,
       lower: outerLowerLip,
-      expandCornersOnly: true,
-      upperLiftPx: 3.0,
     );
     final inner = _closedLipPath(
       face,
@@ -203,14 +203,41 @@ class MakeupPainter extends CustomPainter {
       upper: innerUpperLip,
       lower: innerLowerLip,
     );
-
     final lipPath = Path.combine(PathOperation.difference, outer, inner);
-    canvas.drawPath(
-      lipPath,
-      Paint()
-        ..style = PaintingStyle.fill
-        ..color = color.withOpacity(intensity.clamp(0.0, 1.0)),
+
+    // LAYER 1: The Stain (Multiply) - Ye lips ke natural cracks aur shadows ko dark karta hai
+    final stainPaint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withOpacity((intensity * 0.85).clamp(0.0, 1.0))
+      ..blendMode = BlendMode.multiply
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.0);
+
+    // LAYER 2: The Color Pop (SoftLight) - Ye color ko real lipstick ki tarhan pop karta hai
+    final colorPaint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withOpacity((intensity * 0.65).clamp(0.0, 1.0))
+      ..blendMode = BlendMode.softLight
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.0);
+
+    // LAYER 3: The 3D Gloss (Overlay) - Sirf lower lip par halki si white shine draw karein
+    final lowerLipPath = _closedLipPath(
+      face,
+      size,
+      isFrontCamera,
+      upper: innerLowerLip,
+      lower: outerLowerLip,
     );
+    final glossPaint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = Colors.white
+          .withOpacity((intensity * 0.15).clamp(0.0, 0.3)) // Very subtle white
+      ..blendMode = BlendMode.overlay
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.5);
+
+    // Draw all layers
+    canvas.drawPath(lipPath, stainPaint);
+    canvas.drawPath(lipPath, colorPaint);
+    canvas.drawPath(lowerLipPath, glossPaint);
   }
 
   @override

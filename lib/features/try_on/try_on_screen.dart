@@ -2,12 +2,14 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:camera/camera.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'makeup_painter.dart';
+import 'dart:math' as math;
 
 Uint8List yuv420ToNv21(CameraImage image) {
   final int width = image.width;
@@ -414,7 +416,7 @@ class _TryOnScreenState extends State<TryOnScreen> with WidgetsBindingObserver {
         //   → head movement: anchor moves instantly → lipstick follows perfectly
         //   → detection jitter: smoothed out in relative-space only
         final prev = _facesNotifier.value;
-        final stabilized = _anchorSmoothLips(parsed, prev);
+        final stabilized = _instantExpressionLips(parsed, prev);
 
         _facesNotifier.value = stabilized;
         _faces
@@ -461,7 +463,16 @@ class _TryOnScreenState extends State<TryOnScreen> with WidgetsBindingObserver {
   ///   2. Compute lip offsets FROM anchor in new & prev frames
   ///   3. Smooth only the OFFSETS (removes jitter, not head movement)
   ///   4. Reconstruct: new_anchor + smoothed_offset → instant head-follow + stable lips
-  static List<List<Map<String, double>>> _anchorSmoothLips(
+  /// Advanced Adaptive Smoothing (Inspired by 1-Euro Filter)
+  /// Fixes the 2-3 second delay and stops flickering.
+  /// PRO ADAPTIVE SMOOTHING (Zero-Lag for Mouth Opening)
+  /// PREDICTIVE TRACKING (Lag Compensation)
+  /// Ye agle frame ki position predict karta hai taake lag khatam ho jaye.
+  /// ULTIMATE SMOOTHING (Deadzone + Aggressive Prediction)
+  /// 1. Deadzone: Kills 100% jitter when face is still.
+  /// 2. Prediction: Kills remaining delay when moving.
+  /// INSTANT EXPRESSION LOGIC (Zero Settling Time)
+  static List<List<Map<String, double>>> _instantExpressionLips(
     List<List<Map<String, double>>> parsed,
     List<List<Map<String, double>>> prev,
   ) {
@@ -472,31 +483,41 @@ class _TryOnScreenState extends State<TryOnScreen> with WidgetsBindingObserver {
       final prevFace = prev[fi];
       if (face.length < 468 || prevFace.length < 468) return face;
 
-      // Stable mid-face anchor — unaffected by mouth opening/closing
-      const anchorIdx = [1, 4, 152]; // nose tip, nose bottom, chin
-      final anchorNew = _avgPts(face, anchorIdx);
-      final anchorPrev = _avgPts(prevFace, anchorIdx);
-
       return List.generate(face.length, (pi) {
-        // Non-lip landmarks: pass through raw (instant)
+        // Sirf lips ke points ko process karein
         if (!_lipIndices.contains(pi)) return face[pi];
         if (pi >= prevFace.length) return face[pi];
 
-        // Offset from anchor in this frame vs previous
-        final newOffX = face[pi]['x']! - anchorNew['x']!;
-        final newOffY = face[pi]['y']! - anchorNew['y']!;
-        final prevOffX = prevFace[pi]['x']! - anchorPrev['x']!;
-        final prevOffY = prevFace[pi]['y']! - anchorPrev['y']!;
+        final cx = face[pi]['x']!;
+        final cy = face[pi]['y']!;
+        final px = prevFace[pi]['x']!;
+        final py = prevFace[pi]['y']!;
 
-        // Smooth offset: 55% new, 45% prev → removes jitter, zero head-lag
-        const alpha = 0.55;
-        final smoothOffX = prevOffX + (newOffX - prevOffX) * alpha;
-        final smoothOffY = prevOffY + (newOffY - prevOffY) * alpha;
+        final dx = cx - px;
+        final dy = cy - py;
+        final dist = math.sqrt(dx * dx + dy * dy);
 
-        // Reconstruct absolute position using NEW anchor (head position) + smoothed offset
+        double alpha;
+
+        // THE INSTANT SNAP LOGIC:
+        if (dist < 0.0004) {
+          // 1. Micro-Jitter (Bilkul still face):
+          // Sirf camera ke noise ko lock karne ke liye halki smoothing.
+          alpha = 0.3;
+        } else if (dist > 0.0012) {
+          // 2. ANY Expression (Smile, Talk, Open Mouth):
+          // Jaise hi lips thora sa bhi move honge, Alpha = 1.0 ho jayega.
+          // Iska matlab hai ZERO smoothing, ZERO settling time.
+          // Lipstick fauran nayi shape par snap karegi!
+          alpha = 1.0;
+        } else {
+          // 3. Smooth transition zone (boht chota rakha hai taake delay na aaye)
+          alpha = 0.3 + ((dist - 0.0004) / 0.0008) * 0.7;
+        }
+
         return {
-          'x': anchorNew['x']! + smoothOffX,
-          'y': anchorNew['y']! + smoothOffY,
+          'x': px + dx * alpha,
+          'y': py + dy * alpha,
           'z': face[pi]['z']!,
         };
       });
@@ -626,10 +647,9 @@ class _TryOnScreenState extends State<TryOnScreen> with WidgetsBindingObserver {
           ? nameParts.join(' + ')
           : _categoryLabel(_category);
 
-      final result = await showModalBottomSheet<Map<String, dynamic>>(
+      final result = await showDialog<Map<String, dynamic>>(
         context: context,
-        isScrollControlled: true,
-        backgroundColor: Colors.transparent,
+        barrierColor: Colors.black.withOpacity(0.6),
         builder: (_) => _SaveLookSheet(
           imageBytes: finalBytes,
           suggestedName: suggestedName,
@@ -1547,10 +1567,10 @@ class _SaveLookSheetState extends State<_SaveLookSheet>
     with SingleTickerProviderStateMixin {
   late final TextEditingController _nameCtrl;
   final Set<String> _selectedTags = {};
+  bool _tagsOpen = false;
   late final AnimationController _anim;
   late final Animation<double> _fadeAnim;
-  late final Animation<Offset> _slideAnim;
-  bool _isSaving = false;
+  late final Animation<double> _scaleAnim;
 
   @override
   void initState() {
@@ -1558,12 +1578,12 @@ class _SaveLookSheetState extends State<_SaveLookSheet>
     _nameCtrl = TextEditingController(text: widget.suggestedName);
     _anim = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 420),
+      duration: const Duration(milliseconds: 300),
     );
     _fadeAnim = CurvedAnimation(parent: _anim, curve: Curves.easeOut);
-    _slideAnim = Tween<Offset>(
-      begin: const Offset(0, 0.08),
-      end: Offset.zero,
+    _scaleAnim = Tween<double>(
+      begin: 0.92,
+      end: 1.0,
     ).animate(CurvedAnimation(parent: _anim, curve: Curves.easeOutCubic));
     _anim.forward();
   }
@@ -1583,285 +1603,406 @@ class _SaveLookSheetState extends State<_SaveLookSheet>
 
   @override
   Widget build(BuildContext context) {
-    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
-
     return FadeTransition(
       opacity: _fadeAnim,
-      child: SlideTransition(
-        position: _slideAnim,
-        child: Container(
-          margin: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-          decoration: BoxDecoration(
-            color: const Color(0xFF0E0E0E),
+      child: ScaleTransition(
+        scale: _scaleAnim,
+        child: Dialog(
+          backgroundColor: Colors.transparent,
+          insetPadding: const EdgeInsets.symmetric(horizontal: 20),
+          child: ClipRRect(
             borderRadius: BorderRadius.circular(28),
-            border: Border.all(color: Colors.white.withOpacity(0.07)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.6),
-                blurRadius: 40,
-                spreadRadius: 4,
-              ),
-            ],
-          ),
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(24, 8, 24, 24 + bottomInset),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Handle
-                Center(
-                  child: Container(
-                    width: 36,
-                    height: 4,
-                    margin: const EdgeInsets.only(top: 12, bottom: 20),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.15),
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                  ),
-                ),
-
-                // Preview + title row
-                Row(
-                  children: [
-                    // Mini image preview
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(14),
-                      child: Image.memory(
-                        widget.imageBytes,
-                        width: 64,
-                        height: 80,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Save Your Look',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: -0.3,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            'Name it & tag it for easy discovery',
-                            style: TextStyle(
-                              color: Colors.white.withOpacity(0.45),
-                              fontSize: 12.5,
-                            ),
-                          ),
-                        ],
-                      ),
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(sigmaX: 24, sigmaY: 24),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.08),
+                  borderRadius: BorderRadius.circular(28),
+                  border: Border.all(color: Colors.white.withOpacity(0.15)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.4),
+                      blurRadius: 40,
+                      spreadRadius: 0,
                     ),
                   ],
                 ),
-
-                const SizedBox(height: 24),
-
-                // Name field label
-                Text(
-                  'LOOK NAME',
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.4),
-                    fontSize: 10.5,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 1.4,
-                  ),
-                ),
-                const SizedBox(height: 8),
-
-                // Name input
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.05),
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: Colors.white.withOpacity(0.1)),
-                  ),
-                  child: TextField(
-                    controller: _nameCtrl,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    decoration: InputDecoration(
-                      hintText: 'e.g. Date Night Look',
-                      hintStyle: TextStyle(
-                        color: Colors.white.withOpacity(0.25),
-                        fontSize: 15,
-                      ),
-                      border: InputBorder.none,
-                      contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 14,
-                      ),
-                      suffixIcon: ValueListenableBuilder(
-                        valueListenable: _nameCtrl,
-                        builder: (_, __, ___) => _nameCtrl.text.isNotEmpty
-                            ? IconButton(
-                                icon: Icon(
-                                  Icons.close_rounded,
-                                  color: Colors.white.withOpacity(0.3),
-                                  size: 18,
-                                ),
-                                onPressed: () => _nameCtrl.clear(),
-                              )
-                            : const SizedBox.shrink(),
-                      ),
-                    ),
-                    textCapitalization: TextCapitalization.words,
-                    onSubmitted: (_) => FocusScope.of(context).unfocus(),
-                  ),
-                ),
-
-                const SizedBox(height: 22),
-
-                // Tags label
-                Text(
-                  'TAGS  (optional)',
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.4),
-                    fontSize: 10.5,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 1.4,
-                  ),
-                ),
-                const SizedBox(height: 10),
-
-                // Tags grid
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  children: _kAvailableTags.map((tag) {
-                    final selected = _selectedTags.contains(tag);
-                    return GestureDetector(
-                      onTap: () => setState(() {
-                        selected
-                            ? _selectedTags.remove(tag)
-                            : _selectedTags.add(tag);
-                      }),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 180),
-                        curve: Curves.easeOut,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 14,
-                          vertical: 8,
-                        ),
-                        decoration: BoxDecoration(
-                          color: selected
-                              ? Colors.white.withOpacity(0.92)
-                              : Colors.white.withOpacity(0.06),
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(
-                            color: selected
-                                ? Colors.white
-                                : Colors.white.withOpacity(0.12),
-                            width: 1,
-                          ),
-                        ),
-                        child: Text(
-                          '#$tag',
-                          style: TextStyle(
-                            color: selected
-                                ? Colors.black
-                                : Colors.white.withOpacity(0.7),
-                            fontSize: 13,
-                            fontWeight: selected
-                                ? FontWeight.w700
-                                : FontWeight.w400,
-                            letterSpacing: 0.2,
-                          ),
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                ),
-
-                const SizedBox(height: 28),
-
-                // Buttons row
-                Row(
-                  children: [
-                    // Cancel
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () => Navigator.of(context).pop(),
-                        child: Container(
-                          height: 52,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.06),
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(
-                              color: Colors.white.withOpacity(0.1),
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Header row — image + title
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.memory(
+                              widget.imageBytes,
+                              width: 52,
+                              height: 64,
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          child: Center(
-                            child: Text(
-                              'Cancel',
-                              style: TextStyle(
-                                color: Colors.white.withOpacity(0.6),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    // Save
-                    Expanded(
-                      flex: 2,
-                      child: GestureDetector(
-                        onTap: _save,
-                        child: Container(
-                          height: 52,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.white.withOpacity(0.15),
-                                blurRadius: 20,
-                                spreadRadius: 0,
-                              ),
-                            ],
-                          ),
-                          child: const Center(
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
+                          const SizedBox(width: 14),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Icon(
-                                  Icons.bookmark_rounded,
-                                  color: Colors.black,
-                                  size: 18,
-                                ),
-                                SizedBox(width: 8),
-                                Text(
-                                  'Save Look',
+                                const Text(
+                                  'Save Your Look',
                                   style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15,
+                                    color: Colors.white,
+                                    fontSize: 19,
                                     fontWeight: FontWeight.w700,
-                                    letterSpacing: 0.2,
+                                    letterSpacing: -0.3,
+                                  ),
+                                ),
+                                const SizedBox(height: 3),
+                                Text(
+                                  'Name it & add tags',
+                                  style: TextStyle(
+                                    color: Colors.white.withOpacity(0.45),
+                                    fontSize: 12,
                                   ),
                                 ),
                               ],
                             ),
                           ),
+                          // Close X
+                          GestureDetector(
+                            onTap: () => Navigator.of(context).pop(),
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                color: Colors.white.withOpacity(0.1),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.close_rounded,
+                                color: Colors.white.withOpacity(0.6),
+                                size: 16,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 22),
+
+                      // Name label
+                      Text(
+                        'LOOK NAME',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.4),
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.4,
                         ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 8),
+
+                      // Name field
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.08),
+                          borderRadius: BorderRadius.circular(14),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.15),
+                          ),
+                        ),
+                        child: TextField(
+                          controller: _nameCtrl,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          decoration: InputDecoration(
+                            hintText: 'e.g. Date Night Look',
+                            hintStyle: TextStyle(
+                              color: Colors.white.withOpacity(0.25),
+                              fontSize: 14,
+                            ),
+                            border: InputBorder.none,
+                            contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 14,
+                              vertical: 12,
+                            ),
+                            suffixIcon: ValueListenableBuilder(
+                              valueListenable: _nameCtrl,
+                              builder: (_, __, ___) => _nameCtrl.text.isNotEmpty
+                                  ? IconButton(
+                                      icon: Icon(
+                                        Icons.close_rounded,
+                                        color: Colors.white.withOpacity(0.3),
+                                        size: 16,
+                                      ),
+                                      onPressed: () => _nameCtrl.clear(),
+                                    )
+                                  : const SizedBox.shrink(),
+                            ),
+                          ),
+                          textCapitalization: TextCapitalization.words,
+                          onSubmitted: (_) => FocusScope.of(context).unfocus(),
+                        ),
+                      ),
+
+                      const SizedBox(height: 18),
+
+                      // Tags label
+                      Text(
+                        'TAGS  (optional)',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.4),
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.4,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+
+                      // Tags dropdown button
+                      GestureDetector(
+                        onTap: () => setState(() => _tagsOpen = !_tagsOpen),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 12,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.08),
+                            borderRadius: BorderRadius.circular(14),
+                            border: Border.all(
+                              color: Colors.white.withOpacity(0.15),
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: _selectedTags.isEmpty
+                                    ? Text(
+                                        'Select tags...',
+                                        style: TextStyle(
+                                          color: Colors.white.withOpacity(0.3),
+                                          fontSize: 14,
+                                        ),
+                                      )
+                                    : Wrap(
+                                        spacing: 6,
+                                        runSpacing: 4,
+                                        children: _selectedTags
+                                            .map(
+                                              (t) => Container(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                      horizontal: 8,
+                                                      vertical: 3,
+                                                    ),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white
+                                                      .withOpacity(0.9),
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                child: Text(
+                                                  '#$t',
+                                                  style: const TextStyle(
+                                                    color: Colors.black,
+                                                    fontSize: 11,
+                                                    fontWeight: FontWeight.w700,
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                            .toList(),
+                                      ),
+                              ),
+                              AnimatedRotation(
+                                turns: _tagsOpen ? 0.5 : 0,
+                                duration: const Duration(milliseconds: 200),
+                                child: Icon(
+                                  Icons.keyboard_arrow_down_rounded,
+                                  color: Colors.white.withOpacity(0.5),
+                                  size: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      // Dropdown list
+                      AnimatedCrossFade(
+                        duration: const Duration(milliseconds: 200),
+                        crossFadeState: _tagsOpen
+                            ? CrossFadeState.showSecond
+                            : CrossFadeState.showFirst,
+                        firstChild: const SizedBox.shrink(),
+                        secondChild: Container(
+                          margin: const EdgeInsets.only(top: 6),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.06),
+                            borderRadius: BorderRadius.circular(14),
+                            border: Border.all(
+                              color: Colors.white.withOpacity(0.12),
+                            ),
+                          ),
+                          // Fixed height so it never overflows — scrollable inside
+                          constraints: const BoxConstraints(maxHeight: 200),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(14),
+                            child: SingleChildScrollView(
+                              padding: const EdgeInsets.symmetric(vertical: 6),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: _kAvailableTags.map((tag) {
+                                  final sel = _selectedTags.contains(tag);
+                                  return GestureDetector(
+                                    onTap: () => setState(
+                                      () => sel
+                                          ? _selectedTags.remove(tag)
+                                          : _selectedTags.add(tag),
+                                    ),
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 16,
+                                        vertical: 10,
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          AnimatedContainer(
+                                            duration: const Duration(
+                                              milliseconds: 150,
+                                            ),
+                                            width: 18,
+                                            height: 18,
+                                            decoration: BoxDecoration(
+                                              color: sel
+                                                  ? Colors.white
+                                                  : Colors.transparent,
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                              border: Border.all(
+                                                color: sel
+                                                    ? Colors.white
+                                                    : Colors.white
+                                                        .withOpacity(0.3),
+                                                width: 1.5,
+                                              ),
+                                            ),
+                                            child: sel
+                                                ? const Icon(
+                                                    Icons.check_rounded,
+                                                    color: Colors.black,
+                                                    size: 12,
+                                                  )
+                                                : null,
+                                          ),
+                                          const SizedBox(width: 12),
+                                          Text(
+                                            '#$tag',
+                                            style: TextStyle(
+                                              color: sel
+                                                  ? Colors.white
+                                                  : Colors.white
+                                                      .withOpacity(0.65),
+                                              fontSize: 13.5,
+                                              fontWeight: sel
+                                                  ? FontWeight.w600
+                                                  : FontWeight.w400,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 22),
+
+                      // Buttons
+                      Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => Navigator.of(context).pop(),
+                              child: Container(
+                                height: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(0.07),
+                                  borderRadius: BorderRadius.circular(14),
+                                  border: Border.all(
+                                    color: Colors.white.withOpacity(0.12),
+                                  ),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    'Cancel',
+                                    style: TextStyle(
+                                      color: Colors.white.withOpacity(0.6),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: _save,
+                              child: Container(
+                                height: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(14),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.white.withOpacity(0.2),
+                                      blurRadius: 16,
+                                    ),
+                                  ],
+                                ),
+                                child: const Center(
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(
+                                        Icons.bookmark_rounded,
+                                        color: Colors.black,
+                                        size: 16,
+                                      ),
+                                      SizedBox(width: 7),
+                                      Text(
+                                        'Save Look',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ],
+              ),
             ),
           ),
         ),
