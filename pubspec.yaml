@@ -30,17 +30,28 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+   
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  go_router: ^13.2.0
-  flutter_riverpod: ^2.5.1
-  camera: ^0.11.0+2
+  camera: ^0.12.0
   supabase_flutter: ^2.5.6
-  share_plus: ^7.2.2
+  share_plus: ^12.0.1
   path_provider: ^2.1.2
   url_launcher: ^6.2.0
+  permission_handler: ^12.0.1
+  deepar_flutter:
+    path: packages/deepar_flutter
+  http: ^1.2.0 
+  image_picker: ^1.2.1
+  google_mlkit_face_detection: ^0.13.2
+  shared_preferences: ^2.5.5
+  cached_network_image: ^3.4.1
+  flutter_native_splash: ^2.4.7
+ 
+  # baaki dependencies...
+
+dependency_overrides:
+  permission_handler: ^12.0.1
+  permission_handler_android: ^12.0.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +73,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/effects/makeup.deepar
+    - assets/textures/
+    - assets/images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -93,3 +108,20 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+# ... (baaki file ke niche)
+
+# ... (baaki file ke bilkul niche)
+
+flutter_native_splash:
+  ios: false
+  web: false
+  image: branding/splash/plum.png
+  image_dark: branding/splash/ivory.png
+  color: "#FBF7F2"
+  color_dark: "#1A0A0F"
+  android_12:
+    image: branding/splash/plum_12.png
+    image_dark: branding/splash/ivory_12.png
+    color: "#FBF7F2"
+    color_dark: "#1A0A0F"
+  fullscreen: true

@@ -1,20 +1,27 @@
-allprojects {
+buildscript {
+    val kotlin_version = "2.1.0"
     repositories {
         google()
         mavenCentral()
     }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.7.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
+    }
 }
 
-val newBuildDir: Directory =
-    rootProject.layout.buildDirectory
-        .dir("../../build")
-        .get()
-rootProject.layout.buildDirectory.value(newBuildDir)
-
-subprojects {
-    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
-    project.layout.buildDirectory.value(newSubprojectBuildDir)
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs(File(rootProject.projectDir, "app/libs"))
+        }
+    }
 }
+
+// Custom build directory wala block delete kar diya hai taake Flutter default rasta use kare
+
 subprojects {
     project.evaluationDependsOn(":app")
 }

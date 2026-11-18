@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    layout.buildDirectory.set(file("../../build/app"))
     namespace = "com.example.makeup_tryon"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
@@ -47,6 +48,21 @@ android {
     androidResources {
         noCompress += "task"
     }
+    @Suppress("UnstableApiUsage")
+    testOptions {
+        @Suppress("UnstableApiUsage")
+        execution = "ANDROIDX_TEST_ORCHESTRATOR"
+    }
+
+    // YE BLOCK SABSE IMPORTANT HAI:
+    tasks.withType<com.android.build.gradle.internal.tasks.CheckAarMetadataTask> {
+        enabled = false
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+        // Ensure metadata check is suppressed for safety
+        freeCompilerArgs += listOf("-Xskip-metadata-version-check")
+    }
 }
 
 
@@ -56,4 +72,14 @@ flutter {
 
 dependencies {
     implementation("com.google.mediapipe:tasks-vision:0.10.32")
+    // Packages DeepAR classes and native libs. The plugin compiles against this
+    // AAR with compileOnly and must not implementation() it itself.
+    implementation(files("libs/deepar.aar"))
+}
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (requested.group == "org.jetbrains.kotlin") {
+            useVersion("2.1.0")
+        }
+    }
 }

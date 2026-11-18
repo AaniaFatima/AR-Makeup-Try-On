@@ -1,0 +1,420 @@
+id,created_at,shade_key,product_key,shade_name,shade_hex,shade_order,color_family,skin_tone,undertone
+008560c0-c8de-4289-9d67-0f076874c126,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_02,fnd_estee_double_wear,Ivory,#F3D7C4,2,Nude,Fair,Neutral
+018497ca-eb61-4817-ad77-77bbbb8d3d30,2026-01-25 12:24:27.124663+00,sh_hgl_fenty_killah_watt_03,hgl_fenty_killah_watt,Rose Gold,#E3A8A1,3,Pink,All,Warm
+0221455f-9db4-4182-b05b-966c71512489,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_05,fnd_maybelline_fitme_matte,Deep Tan,#8A533B,5,Brown,Deep,Warm
+025840c7-6c53-4ed6-95e3-a0f81066c08a,2026-01-25 12:24:27.124663+00,sh_hgl_elf_halo_glow_04,hgl_elf_halo_glow,Copper Glow,#B87333,4,Bronze,All,Warm
+032fb241-a2ce-4257-bf4c-49c0ea99fd6b,2026-01-25 12:24:27.124663+00,sh_blu_essence_the_blush_02,blu_essence_the_blush,Berry,#7A1E3A,2,Berry,All,Cool
+033df678-971c-4de3-85ae-8b152e7a64a6,2026-01-25 12:24:27.124663+00,sh_eln_nyx_epic_ink_04,eln_nyx_epic_ink,Plum,#4A1F3A,4,Purple,All,Cool
+049eff68-ce32-4347-b980-78f7d8024976,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_06,gloss_nyx_butter_gloss,Caramel Shine,#D9A17A,6,Brown,All,Warm
+0524a7ea-7e18-49ed-bc44-578288b4d3fa,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_07,gloss_maybelline_lifter,Caramel Shine,#D9A17A,7,Brown,All,Warm
+067cb72f-6243-4485-9632-6e8ef74f4053,2026-01-25 12:24:27.124663+00,sh_lsh_duo_lash_adhesive_02,lsh_duo_lash_adhesive,Volume,#000000,2,Black,All,Neutral
+06f0061a-0243-477e-bdc7-eeca7940c665,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_06,gloss_elf_lip_lacquer,Caramel Shine,#D9A17A,6,Brown,All,Warm
+06fd2c62-c03f-42ce-b0b7-de2b038d1b51,2026-01-25 12:24:27.124663+00,sh_blu_essence_the_blush_03,blu_essence_the_blush,Warm Tan,#D8A47F,3,Brown,All,Warm
+076ac666-1204-48c9-90b1-30e623b3fbba,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_02,lip_colourpop_lippie_stix,Plum,#5A2A5A,2,Purple,All,Cool
+078b00c2-3bc0-4511-b3f2-c964b9c4904f,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_08,fnd_clinique_even_better,Porcelain,#F7E7DA,8,Nude,Fair,Cool
+0828015c-a864-4fde-9be2-231392f922bf,2026-01-25 12:24:27.124663+00,sh_hgl_elf_halo_glow_02,hgl_elf_halo_glow,Rose Gold,#E3A8A1,2,Pink,All,Warm
+0834be72-8ad0-4c61-8a79-f2915215c2cc,2026-01-25 12:24:27.124663+00,sh_gloss_fenty_glossbomb_06,gloss_fenty_glossbomb,Berry Glaze,#7A1E3A,6,Berry,All,Cool
+08597cb0-fca4-422b-88ed-9d595b3e0821,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_11,fnd_covergirl_clean,Ivory,#F3D7C4,11,Nude,Fair,Neutral
+08a66bb6-8723-48f0-8e9d-6d69e388bd96,2026-01-25 12:24:27.124663+00,sh_esh_elf_bite_size_02,esh_elf_bite_size,Mauve Haze,#B56576,2,Pink,All,Cool
+0900b4fa-10cc-400e-a07a-db65d80b58f9,2026-01-25 12:24:27.124663+00,sh_lip_wetnwild_megalast_04,lip_wetnwild_megalast,Peach Nude,#E6A57E,4,Nude,All,Warm
+0928a978-e81d-4927-b36a-c5b213c9cd79,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_07,gloss_colourpop_sojuicy,Berry Glaze,#7A1E3A,7,Berry,All,Cool
+0a682936-aa97-4bac-bed9-401172b13079,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_12,fnd_loreal_infallible_freshwear,Espresso,#4E2C23,12,Brown,Deep,Neutral
+0bdac74d-a4e3-4b19-b497-af13ed4f9762,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_08,fnd_nyx_cantstopwontstop,Porcelain,#F7E7DA,8,Nude,Fair,Cool
+0c3bdfb6-0e26-4b67-82f6-1303ad28cce4,2026-01-25 12:24:27.124663+00,sh_mas_benefit_theyre_real_01,mas_benefit_theyre_real,Black,#111111,1,Black,All,Neutral
+0c66e4ce-7b4b-458f-8dd0-23ad90334644,2026-01-25 12:24:27.124663+00,sh_blu_milani_baked_blush_04,blu_milani_baked_blush,Peach,#F6C49E,4,Peach,All,Warm
+0dea45e9-73d9-42e4-a409-9a4355e197b1,2026-01-25 12:24:27.124663+00,sh_eln_elf_h2o_proof_01,eln_elf_h2o_proof,Espresso,#3B2A22,1,Brown,All,Neutral
+0e3617a0-71de-4baf-beff-ae30b82fe402,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_04,lip_revlon_super_lustrous,Brown Nude,#8B5E3C,4,Brown,All,Warm
+0eae370c-ecff-43e6-9026-cc2439626761,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_02,lip_revlon_super_lustrous,Coral,#F07167,2,Coral,All,Warm
+0ed91c45-498e-4538-8fba-e021f29a4da6,2026-01-25 12:24:27.124663+00,sh_eln_loreal_superstar_liquid_02,eln_loreal_superstar_liquid,Soft Black,#2B2B2B,2,Black,All,Neutral
+0f1d3bcb-9d74-44d4-8d7d-adf1dcd191ff,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_08,gloss_nyx_butter_gloss,Berry Glaze,#7A1E3A,8,Berry,All,Cool
+0fcd1431-90ec-4cde-b07f-c5805994d6ff,2026-01-25 12:24:27.124663+00,sh_gloss_fenty_glossbomb_05,gloss_fenty_glossbomb,Chocolate Glaze,#8B5E3C,5,Brown,All,Warm
+104d5a99-6d7d-4360-8744-f17878d47af8,2026-01-25 12:24:27.124663+00,sh_esh_abh_soft_glam_04,esh_abh_soft_glam,Mauve Haze,#B56576,4,Pink,All,Cool
+10a119d8-6bd1-4433-a373-f8ba55dea65a,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_01,lip_maybelline_superstay_matte_ink,Brick Red,#9A1F2C,1,Red,All,Warm
+130b337d-f74d-4d2a-b65b-75807a73c432,2026-01-25 12:24:27.124663+00,sh_eln_maybelline_hypereasy_04,eln_maybelline_hypereasy,Jet Black,#111111,4,Black,All,Neutral
+13ed92b3-289f-41f4-8092-ff1a86eb1065,2026-01-25 12:24:27.124663+00,sh_blu_burtsbees_blush_01,blu_burtsbees_blush,Berry,#7A1E3A,1,Berry,All,Cool
+142ef8fc-7ccb-42cf-81b1-7b6b9705dabc,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_06,fnd_clinique_even_better,Espresso,#4E2C23,6,Brown,Deep,Neutral
+145a32fe-c433-433a-979a-122a46d3a32c,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_10,fnd_nyx_cantstopwontstop,Ivory,#F3D7C4,10,Nude,Fair,Neutral
+15cae1ea-5519-473e-841b-d10718921d0e,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_10,fnd_elf_camo_cc,Alabaster,#F7E6D8,10,Nude,Fair,Cool
+161e7909-9bf3-453c-8491-42f3f2cb6615,2026-01-25 12:24:27.124663+00,sh_esh_covergirl_trunaked_roses_02,esh_covergirl_trunaked_roses,Soft Gold,#E6C98F,2,Gold,All,Warm
+1651bf77-d4f8-4253-a93c-5af92ace0f6e,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_03,gloss_nyx_butter_gloss,Rose Glow,#F2B5C4,3,Pink,All,Cool
+167d4ee8-c668-4592-ad22-981569e374c9,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_08,lip_maybelline_superstay_matte_ink,Mauve,#8A3D5C,8,Pink,All,Cool
+173ba1fe-6e73-432a-8036-dd4c384e703e,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_02,lip_clinique_pop,Plum,#5A2A5A,2,Purple,All,Cool
+17a3922d-557e-4caf-b6f9-cd1724fc4a5f,2026-01-25 12:24:27.124663+00,sh_blu_burtsbees_blush_02,blu_burtsbees_blush,Warm Tan,#D8A47F,2,Brown,All,Warm
+1864d8da-59d2-4fff-b091-be840a220081,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_02,fnd_nyx_cantstopwontstop,Chestnut,#8D553C,2,Brown,Deep,Warm
+192d8b27-ae39-4495-bc24-be71ed13b094,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_05,fnd_clinique_even_better,Mocha,#5A3326,5,Brown,Deep,Neutral
+1a2336ca-bd5c-4a42-bee6-edcde2a2f2c2,2026-01-25 12:24:27.124663+00,sh_lip_wetnwild_megalast_09,lip_wetnwild_megalast,Mauve,#8A3D5C,9,Pink,All,Cool
+1c6ae123-ba8b-475c-93e8-49273438bb6e,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_05,fnd_catrice_hd_liquid,Natural Beige,#E3BFA7,5,Nude,Light,Neutral
+1c91060d-9a51-49fe-9841-382ffd28d173,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_09,fnd_revlon_colorstay,Buff,#EECBB6,9,Nude,Light,Neutral
+1d1019bc-e032-4d77-8782-88fe368d86e0,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_03,gloss_elf_lip_lacquer,Rose Glow,#F2B5C4,3,Pink,All,Cool
+1db48424-7c26-4447-8e18-f576ddc3ebd0,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_11,fnd_smashbox_studio_skin,Vanilla,#EFCDB9,11,Nude,Fair,Neutral
+1e7581ae-77ca-4134-ab3e-ee889995a52e,2026-01-25 12:24:27.124663+00,sh_esh_colourpop_going_coconuts_04,esh_colourpop_going_coconuts,Soft Taupe,#CBB9A6,4,Brown,All,Cool
+1eb324ca-e942-4328-9700-4b100bd343f9,2026-01-25 12:24:27.124663+00,sh_mas_nyx_ontherise_03,mas_nyx_ontherise,Soft Black,#2B2B2B,3,Black,All,Neutral
+1fd781e8-6f8e-4602-bacf-f2fb62005346,2026-01-25 12:24:27.124663+00,sh_hgl_milani_strobelight_04,hgl_milani_strobelight,Copper Glow,#B87333,4,Bronze,All,Warm
+203ce841-e894-4394-a2e4-aab001b3c7e9,2026-01-25 12:24:27.124663+00,sh_gloss_milani_ludicrous_01,gloss_milani_ludicrous,Caramel Shine,#D9A17A,1,Brown,All,Warm
+203f81c8-e7e2-4f5c-8a85-a04cf3f7b772,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_03,fnd_nyx_cantstopwontstop,Deep Tan,#8A533B,3,Brown,Deep,Warm
+21105efb-5d76-4b8f-a6b0-3f24975401a8,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_05,fnd_revlon_colorstay,Porcelain,#F7E7DA,5,Nude,Fair,Cool
+21381504-f05a-4fcb-84d2-3d09dfef5c44,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_04,lip_clinique_pop,Classic Red,#C1121F,4,Red,All,Neutral
+213ffd7c-9d36-43f1-8752-f490314cb021,2026-01-25 12:24:27.124663+00,sh_esh_milani_gilded_04,esh_milani_gilded,Vanilla Cream,#F2E6D8,4,Nude,All,Warm
+2208086f-9629-4f34-a4f4-87ebd0f58ea0,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_08,gloss_maybelline_lifter,Chocolate Glaze,#8B5E3C,8,Brown,All,Warm
+22f31f9b-7bc7-481f-9483-dc512d6aba11,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_07,fnd_catrice_hd_liquid,Sand,#CFA07F,7,Brown,Medium,Warm
+22f9a28c-2281-4ba7-8e3f-78d51e6a437c,2026-01-25 12:24:27.124663+00,sh_blu_milani_baked_blush_03,blu_milani_baked_blush,Rosy Nude,#E3A8A1,3,Pink,All,Neutral
+230c2759-4eda-4772-baff-ea24760c6112,2026-01-25 12:24:27.124663+00,sh_esh_maybelline_the_nudes_04,esh_maybelline_the_nudes,Champagne Glow,#E6D2AA,4,Gold,All,Warm
+233f6f38-de5e-4042-9fd5-7dfca0fb3b3e,2026-01-25 12:24:27.124663+00,sh_lsh_kiss_ritzy_01,lsh_kiss_ritzy,Wispy,#000000,1,Black,All,Neutral
+23a65624-f081-45e7-b864-0bd4ef4b435a,2026-01-25 12:24:27.124663+00,sh_hgl_wetnwild_megaglo_02,hgl_wetnwild_megaglo,Bronze,#C08C69,2,Bronze,All,Warm
+23b5b21b-d89f-4585-b44a-a841bccc6b14,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_05,lip_burtsbees_tinted,Deep Wine,#4A0E23,5,Berry,All,Cool
+257dfb43-ba9a-4394-bcaf-1cf063be4f3f,2026-01-25 12:24:27.124663+00,sh_blu_milani_baked_blush_02,blu_milani_baked_blush,Soft Pink,#F2A7B5,2,Pink,All,Cool
+25c16090-eb75-45c8-bf7c-02cbf017ef64,2026-01-25 12:24:27.124663+00,sh_lsh_ardell_natural_110_01,lsh_ardell_natural_110,Wispy,#000000,1,Black,All,Neutral
+26a8ef80-dc03-4e83-a713-61e48c80a908,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_01,fnd_covergirl_clean,Honey,#B57B55,1,Brown,Medium,Warm
+2703bc4f-d4e0-4911-8dd5-fba32040b40d,2026-01-25 12:24:27.124663+00,sh_esh_nyx_ultimate_02,esh_nyx_ultimate,Rose Dust,#C97C7A,2,Pink,All,Warm
+2719f86e-2174-42a4-9a54-562349d2eb51,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_02,fnd_maybelline_fitme_matte,Honey,#B57B55,2,Brown,Medium,Warm
+272dd516-b46c-4fd7-96c8-454c702f8191,2026-01-25 12:24:27.124663+00,sh_esh_abh_soft_glam_06,esh_abh_soft_glam,Cocoa Brown,#8B5E3C,6,Brown,All,Neutral
+273a33d2-63da-448c-8b88-09d786018fe8,2026-01-25 12:24:27.124663+00,sh_eln_revlon_colorstay_02,eln_revlon_colorstay,Navy,#1F2A5A,2,Blue,All,Cool
+28230fa2-fe41-4035-acf2-d2db63f4f9bb,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_10,fnd_smashbox_studio_skin,Ivory,#F3D7C4,10,Nude,Fair,Neutral
+290c9237-4533-42ff-9f05-0e2438890ae9,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_07,lip_loreal_color_riche,Plum,#5A2A5A,7,Purple,All,Cool
+29dbbda0-cfda-461c-8794-fcb35017f4da,2026-01-25 12:24:27.124663+00,sh_esh_catrice_the_coffret_06,esh_catrice_the_coffret,Deep Cocoa,#6D3F2F,6,Brown,All,Neutral
+2b2e56df-3fa7-4109-ad57-545c71e1f05a,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_03,fnd_elf_camo_cc,Chestnut,#8D553C,3,Brown,Deep,Warm
+2b56a92f-d6f7-408f-a7d8-9789ae8e7fab,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_12,fnd_nyx_cantstopwontstop,Buff,#EECBB6,12,Nude,Light,Neutral
+2bc6a580-b680-4abe-91b3-9fb08a4a53f3,2026-01-25 12:24:27.124663+00,sh_esh_abh_soft_glam_03,esh_abh_soft_glam,Rose Dust,#C97C7A,3,Pink,All,Warm
+2c029eea-e787-41cc-aa77-54f14b700290,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_05,fnd_nyx_cantstopwontstop,Mocha,#5A3326,5,Brown,Deep,Neutral
+2c0ab132-e084-472f-bad7-1910d15ac5e2,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_01,fnd_nyx_cantstopwontstop,Caramel,#A36545,1,Brown,Tan,Warm
+2c0b3010-70b2-4b41-9bac-bf48338e61c8,2026-01-25 12:24:27.124663+00,sh_esh_colourpop_going_coconuts_02,esh_colourpop_going_coconuts,Copper,#B87333,2,Bronze,All,Warm
+2c275f52-da20-4cc1-bf76-ea0771fa38da,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_10,fnd_covergirl_clean,Alabaster,#F7E6D8,10,Nude,Fair,Cool
+2c977f05-cec1-4768-8f63-2e625ebe0d95,2026-01-25 12:24:27.124663+00,sh_eln_wetnwild_breakup_03,eln_wetnwild_breakup,Plum,#4A1F3A,3,Purple,All,Cool
+2cb33e44-65a9-4a9e-b0a3-71b0c62a8ea5,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_11,fnd_loreal_infallible_freshwear,Mocha,#5A3326,11,Brown,Deep,Neutral
+2cc07d0b-9b33-45b0-9f2a-ca97379ef434,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_04,lip_mac_matte,Deep Wine,#4A0E23,4,Berry,All,Cool
+2d9fda94-a64f-4396-915e-588fe52e65e7,2026-03-15 12:31:59.942631+00,purple,esh_maybelline_the_nudes,purple,#a555af,7,Purple,All,Cool
+2ed65bae-e0b7-4697-9799-34f049d559a1,2026-01-25 12:24:27.124663+00,sh_blu_benefit_dandelion_01,blu_benefit_dandelion,Rose,#C97C7A,1,Pink,All,Warm
+30a67edb-bd13-41f7-93b2-805f3ea320fc,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_01,gloss_maybelline_lifter,Red Spark,#C1121F,1,Red,All,Warm
+30c7886b-f691-4d01-8b82-2633e45a2f90,2026-01-25 12:24:27.124663+00,sh_blu_wetnwild_coloricon_04,blu_wetnwild_coloricon,Peach,#F6C49E,4,Peach,All,Warm
+30e6716c-a48b-4c37-98d9-a89411dcf529,2026-01-25 12:24:27.124663+00,sh_lip_wetnwild_megalast_06,lip_wetnwild_megalast,Velvet Nude,#D19A8A,6,Nude,All,Warm
+313135fd-7009-445c-bf63-03fe2823d195,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_11,fnd_too_faced_born_this_way,Porcelain,#F7E7DA,11,Nude,Fair,Cool
+31996694-7cb2-4394-8ad3-1933996ae846,2026-01-25 12:24:27.124663+00,sh_blu_nyx_sweet_cheeks_04,blu_nyx_sweet_cheeks,Mauve,#B56576,4,Pink,All,Cool
+3275900b-36fb-446b-96d9-473ec7f20d7b,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_08,fnd_loreal_true_match,Ivory,#F3D7C4,8,Nude,Fair,Neutral
+328eae82-7ea0-4798-806d-77b0fe2d73b8,2026-01-25 12:24:27.124663+00,sh_gloss_milani_ludicrous_07,gloss_milani_ludicrous,Rose Glow,#F2B5C4,7,Pink,All,Cool
+32c9cb33-825a-480b-89f6-682b0f18a7fe,2026-01-25 12:24:27.124663+00,sh_esh_ud_naked_heat_03,esh_ud_naked_heat,Rosewood,#8A3D5C,3,Pink,All,Warm
+3306a6c8-c7b8-44b8-906a-c5f40131d912,2026-01-25 12:24:27.124663+00,sh_lip_elf_cream_10,lip_elf_cream,Brown Nude,#8B5E3C,10,Brown,All,Warm
+3317d68b-0001-4872-92db-cbef081c47ff,2026-01-25 12:24:27.124663+00,sh_esh_ud_naked_heat_04,esh_ud_naked_heat,Cocoa Brown,#8B5E3C,4,Brown,All,Neutral
+332d82f7-bb01-4e57-9d48-42dd114c67d3,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_08,gloss_colourpop_sojuicy,Red Spark,#C1121F,8,Red,All,Warm
+33a785ee-07a8-41a9-b4ff-215e4cbf3578,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_10,fnd_clinique_even_better,Ivory,#F3D7C4,10,Nude,Fair,Neutral
+33fb3fb8-e853-4616-9dae-3b007ceac6dc,2026-01-25 12:24:27.124663+00,sh_esh_too_faced_chocolate_02,esh_too_faced_chocolate,Soft Taupe,#CBB9A6,2,Brown,All,Cool
+347a59d8-7de8-4bcb-bb8a-218deb9608f3,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_10,fnd_catrice_hd_liquid,Caramel,#A36545,10,Brown,Tan,Warm
+34bc272f-17d4-42cd-b554-95e6c8e56789,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_01,gloss_nyx_butter_gloss,Plum Shine,#5A2A5A,1,Purple,All,Cool
+34e60d4c-9c6b-4abc-b87d-36ebe799bafb,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_09,lip_revlon_super_lustrous,Berry,#7A1E3A,9,Berry,All,Cool
+34eaf9ba-22e7-4ef6-b7fe-8a45457b2bad,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_10,lip_burtsbees_tinted,Brown Nude,#8B5E3C,10,Brown,All,Warm
+35131d63-3a2a-4423-8403-355b70951ca8,2026-01-25 12:24:27.124663+00,sh_blu_milani_baked_blush_05,blu_milani_baked_blush,Coral,#F07167,5,Coral,All,Warm
+3538fe7d-1e9f-4b71-b632-5351f40c224b,2026-01-25 12:24:27.124663+00,sh_esh_too_faced_chocolate_05,esh_too_faced_chocolate,Mauve Haze,#B56576,5,Pink,All,Cool
+3574508f-f35d-40fa-83eb-ea5ba6e10095,2026-03-09 06:14:53.215626+00,new_shade,maybelline_superstay_matte_linkk,New Shade,#bc3838,1,Red,All,Warm
+35e6ed84-e6ad-437e-8370-b017f1206236,2026-01-25 12:24:27.124663+00,sh_esh_maybelline_the_nudes_02,esh_maybelline_the_nudes,Charcoal,#3A3A3A,2,Black,All,Cool
+361f7601-4b10-497f-9666-b688b7fe0cda,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_08,fnd_too_faced_born_this_way,Mocha,#5A3326,8,Brown,Deep,Neutral
+3637163f-c52e-436d-8302-f8f674c69337,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_05,lip_clinique_pop,Brick Red,#9A1F2C,5,Red,All,Warm
+36956963-ace6-4213-b25f-71e812184e77,2026-01-25 12:24:27.124663+00,sh_gloss_fenty_glossbomb_02,gloss_fenty_glossbomb,Peach Sheen,#F6C49E,2,Peach,All,Warm
+36e90db1-9f3e-4897-b3c2-4bfb4526472d,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_04,fnd_elf_camo_cc,Deep Tan,#8A533B,4,Brown,Deep,Warm
+3749175e-4c3e-4065-9543-b7ac026827b0,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_12,fnd_clinique_even_better,Buff,#EECBB6,12,Nude,Light,Neutral
+38b681c4-92d4-494d-a99e-4d9bec872c97,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_04,fnd_too_faced_born_this_way,Caramel,#A36545,4,Brown,Tan,Warm
+38dddbfc-f6ac-411f-a5cd-64e233713119,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_01,fnd_smashbox_studio_skin,Caramel,#A36545,1,Brown,Tan,Warm
+396de98a-9c8e-4be5-9d13-645fe2208ad4,2026-01-25 12:24:27.124663+00,sh_blu_wetnwild_coloricon_05,blu_wetnwild_coloricon,Coral,#F07167,5,Coral,All,Warm
+39c8fd88-a2ec-46ae-89b8-0b44dfb90271,2026-01-25 12:24:27.124663+00,sh_gloss_revlon_super_lustrous_03,gloss_revlon_super_lustrous,Champagne,#E6D2AA,3,Gold,All,Warm
+39e579a0-dc20-4ac3-a4d6-e4cecc63b246,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_03,fnd_too_faced_born_this_way,Honey,#B57B55,3,Brown,Medium,Warm
+3addf635-98f8-4cc5-acb3-35d53f63c01d,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_02,fnd_loreal_true_match,Cocoa,#6E3F2F,2,Brown,Deep,Neutral
+3b215ba5-7cb9-4a59-93e2-ab1a7c17cfda,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_04,fnd_smashbox_studio_skin,Cocoa,#6E3F2F,4,Brown,Deep,Neutral
+3b67df6f-20e8-4ed9-bcee-5a3df86e0ad6,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_06,lip_clinique_pop,Coral,#F07167,6,Coral,All,Warm
+3b78b867-3e37-4d84-9d4a-7d0598b669b3,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_02,gloss_maybelline_lifter,Plum Shine,#5A2A5A,2,Purple,All,Cool
+3bc9e0b7-36b5-4de6-a5d0-7d520915287e,2026-01-25 12:24:27.124663+00,sh_hgl_elf_halo_glow_03,hgl_elf_halo_glow,Bronze,#C08C69,3,Bronze,All,Warm
+3c239ab9-8b4d-4d9b-a869-398ea2b459d6,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_06,fnd_catrice_hd_liquid,Warm Nude,#DDB294,6,Nude,Light,Warm
+3c453304-f2c3-4af6-9c54-dcfc6a28f9e8,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_01,fnd_loreal_true_match,Deep Tan,#8A533B,1,Brown,Deep,Warm
+3c4d7c4b-74ff-407d-b383-d7a3783816d6,2026-01-25 12:24:27.124663+00,sh_gloss_revlon_super_lustrous_04,gloss_revlon_super_lustrous,Caramel Shine,#D9A17A,4,Brown,All,Warm
+3cb2c984-7b7f-49bf-a95c-f36b6f6f96d8,2026-01-25 12:24:27.124663+00,sh_mas_benefit_theyre_real_02,mas_benefit_theyre_real,Soft Black,#2B2B2B,2,Black,All,Neutral
+3cb3d279-8786-4ff1-8d7f-8d5c21c243d4,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_12,fnd_too_faced_born_this_way,Alabaster,#F7E6D8,12,Nude,Fair,Cool
+3dd07e69-74e6-426e-bb43-737f7e8ff6a9,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_02,lip_milani_color_statement,Coral,#F07167,2,Coral,All,Warm
+3e4b25dc-5258-47b1-8886-6defd2245b5d,2026-01-25 12:24:27.124663+00,sh_gloss_fenty_glossbomb_08,gloss_fenty_glossbomb,Plum Shine,#5A2A5A,8,Purple,All,Cool
+3e810b5f-3f62-4577-bb5b-60bd4164dacc,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_12,fnd_covergirl_clean,Vanilla,#EFCDB9,12,Nude,Fair,Neutral
+3f115232-2c01-40c3-8c8a-09d11ff459bd,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_05,fnd_estee_double_wear,Nude Beige,#E4BFA6,5,Nude,Light,Neutral
+3f6aea48-dbfd-4a45-96aa-fcb0ae21e218,2026-01-25 12:24:27.124663+00,sh_esh_elf_bite_size_01,esh_elf_bite_size,Rose Dust,#C97C7A,1,Pink,All,Warm
+3f717f80-fe67-430b-9f61-fa0f89894900,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_02,lip_maybelline_color_sensational_matte,Brown Nude,#8B5E3C,2,Brown,All,Warm
+4031422d-d4f0-4255-bfc7-17f364b727a2,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_08,fnd_elf_camo_cc,Ebony,#4B2A21,8,Brown,Deep,Neutral
+41311c3d-d65d-42ec-8a46-ddb5b5437ccb,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_10,lip_colourpop_lippie_stix,Rose Nude,#C97C7A,10,Pink,All,Warm
+41a32808-5dbd-46b8-8569-0212a974dc92,2026-01-25 12:24:27.124663+00,sh_blu_clinique_cheek_pop_04,blu_clinique_cheek_pop,Rose,#C97C7A,4,Pink,All,Warm
+423569cc-d8d4-4bb9-9756-f4ec68994a7b,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_01,fnd_elf_camo_cc,Honey,#B57B55,1,Brown,Medium,Warm
+4330457f-ecc0-4050-84a1-16b0f7e5b28b,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_12,fnd_maybelline_fitme_matte,Ivory,#F3D7C4,12,Nude,Fair,Neutral
+44109c70-373a-452c-86ce-9df43efb7916,2026-01-25 12:24:27.124663+00,sh_esh_ud_naked_heat_06,esh_ud_naked_heat,Charcoal,#3A3A3A,6,Black,All,Cool
+442d4261-a54f-4f3b-a598-4321517c3f79,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_09,fnd_estee_double_wear,Golden Beige,#C18E69,9,Brown,Medium,Warm
+442fff8f-d494-4873-9688-9198c09cd9e1,2026-01-25 12:24:27.124663+00,sh_mas_nyx_ontherise_02,mas_nyx_ontherise,Black,#111111,2,Black,All,Neutral
+4438f2bd-93b2-44df-b7d3-733104b6e3c7,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_06,fnd_loreal_true_match,Porcelain,#F7E7DA,6,Nude,Fair,Cool
+4449a701-63bf-4c77-9da0-1e9e3fb70923,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_06,fnd_covergirl_clean,Mocha,#5A3326,6,Brown,Deep,Neutral
+450544b8-d19f-46d2-aa0f-78d2636e7c53,2026-01-25 12:24:27.124663+00,sh_esh_nyx_ultimate_05,esh_nyx_ultimate,Cocoa Brown,#8B5E3C,5,Brown,All,Neutral
+4574307e-9b79-4cfa-b67f-115f25e0d7ea,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_06,lip_revlon_super_lustrous,Rose Nude,#C97C7A,6,Pink,All,Warm
+4599eff3-113f-4cde-9b87-0807214f0984,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_12,fnd_smashbox_studio_skin,Buff,#EECBB6,12,Nude,Light,Neutral
+45b8ff04-57ac-4e91-a197-c46e05bf73dd,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_09,lip_loreal_color_riche,Classic Red,#C1121F,9,Red,All,Neutral
+481f8729-855b-448b-8464-5240bfc67013,2026-01-25 12:24:27.124663+00,sh_esh_maybelline_the_nudes_05,esh_maybelline_the_nudes,Copper,#B87333,5,Bronze,All,Warm
+4846cb35-f03d-4044-bd24-38c0778bf8af,2026-01-25 12:24:27.124663+00,sh_esh_catrice_the_coffret_03,esh_catrice_the_coffret,Mauve Haze,#B56576,3,Pink,All,Cool
+486a524b-7fa7-47fe-b713-5db23da9cf2a,2026-03-11 07:57:00.306675+00,pinky,rosy_foundation,pinky,#d9c4c4,1,Pink,Fair,Cool
+48abd1c4-cdc3-4930-a7ca-6801fd582f6a,2026-01-25 12:24:27.124663+00,sh_mas_maybelline_skyhigh_02,mas_maybelline_skyhigh,Soft Black,#2B2B2B,2,Black,All,Neutral
+48cddae8-9741-4053-ae2c-d7d3cde90395,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_02,gloss_elf_lip_lacquer,Glass Clear,#F8F1EE,2,Clear,All,Neutral
+48d7743c-9c92-4d36-a1ae-78cef76a945a,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_06,fnd_loreal_infallible_freshwear,Honey,#B57B55,6,Brown,Medium,Warm
+48d824c4-2b0d-4836-8794-b3ff6fd3ffa2,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_01,fnd_maybelline_fitme_matte,Golden Beige,#C18E69,1,Brown,Medium,Warm
+490ab7d7-13a0-44b5-9935-92d3ebd7c1d8,2026-03-15 12:43:17.287319+00,dusky,esh_colourpop_going_coconuts,Dusky,#74256d,8,Purple,All,Cool
+4931f26e-19f6-445d-954e-61fe0ce28e55,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_01,fnd_revlon_colorstay,Cocoa,#6E3F2F,1,Brown,Deep,Neutral
+49674251-e156-4963-a49d-91d6f2101fa7,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_08,gloss_elf_lip_lacquer,Berry Glaze,#7A1E3A,8,Berry,All,Cool
+4a41e44a-c3a6-4e6e-9421-6a1cb03c3108,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_09,lip_clinique_pop,Velvet Nude,#D19A8A,9,Nude,All,Warm
+4b373321-248e-4cc8-9730-33680eca3a5f,2026-01-25 12:24:27.124663+00,sh_esh_too_faced_chocolate_01,esh_too_faced_chocolate,Vanilla Cream,#F2E6D8,1,Nude,All,Warm
+4bb35c14-f5ba-4cd8-b22d-ef708d96c2cd,2026-01-25 12:24:27.124663+00,sh_mas_maybelline_skyhigh_01,mas_maybelline_skyhigh,Black,#111111,1,Black,All,Neutral
+4c358f7e-55a5-471d-8d6c-6ca04f14f545,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_04,lip_burtsbees_tinted,Plum,#5A2A5A,4,Purple,All,Cool
+4c767991-03d8-4d9b-a320-c0842c6945ac,2026-01-25 12:24:27.124663+00,sh_eln_kvd_tattoo_02,eln_kvd_tattoo,Espresso,#3B2A22,2,Brown,All,Neutral
+4c91a44f-a08f-4225-8c43-e30ca8169326,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_07,lip_revlon_super_lustrous,Dusty Pink,#B56576,7,Pink,All,Cool
+4cac3912-04f9-4024-89e7-b57fb03b486b,2026-01-25 12:24:27.124663+00,sh_esh_covergirl_trunaked_roses_01,esh_covergirl_trunaked_roses,Charcoal,#3A3A3A,1,Black,All,Cool
+4d5dfd15-c87a-4a58-856b-8a681d91e748,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_08,fnd_smashbox_studio_skin,Porcelain,#F7E7DA,8,Nude,Fair,Cool
+4e834fef-53ed-445d-bc51-f5845d546080,2026-01-25 12:24:27.124663+00,sh_lsh_ardell_wispies_02,lsh_ardell_wispies,Volume,#000000,2,Black,All,Neutral
+4ef691d7-4ddb-4c23-9bd8-9f4fae27aa39,2026-01-25 12:24:27.124663+00,sh_blu_nars_powder_blush_01,blu_nars_powder_blush,Coral,#F07167,1,Coral,All,Warm
+4f180834-0edb-4dbe-9ece-c563252901b5,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_10,lip_clinique_pop,Rose Nude,#C97C7A,10,Pink,All,Warm
+4f4e3138-b922-4253-af0c-e2a20d519730,2026-01-25 12:24:27.124663+00,sh_eln_wetnwild_breakup_01,eln_wetnwild_breakup,Deep Brown,#5A3A2B,1,Brown,All,Neutral
+50736ae3-24cb-45e5-b08e-dbea1e50ad0f,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_07,fnd_smashbox_studio_skin,Ebony,#4B2A21,7,Brown,Deep,Neutral
+5089856c-41dd-4eea-ae1e-b71602538d29,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_02,fnd_loreal_infallible_freshwear,Natural Beige,#E3BFA7,2,Nude,Light,Neutral
+519a1465-17c4-433b-bf4a-d8e4ae98f899,2026-01-25 12:24:27.124663+00,sh_esh_colourpop_going_coconuts_06,esh_colourpop_going_coconuts,Rose Dust,#C97C7A,6,Pink,All,Warm
+51b5d5f6-8a33-41ae-aad1-344f120d31d2,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_07,fnd_elf_camo_cc,Espresso,#4E2C23,7,Brown,Deep,Neutral
+5243b9b3-e84d-48a3-8c66-0fe5076fe646,2026-01-25 12:24:27.124663+00,sh_hgl_fenty_killah_watt_01,hgl_fenty_killah_watt,Champagne,#E6D2AA,1,Gold,All,Warm
+52495a13-b4ef-4883-a338-1f236c92b09c,2026-01-25 12:24:27.124663+00,sh_blu_essence_the_blush_05,blu_essence_the_blush,Rosy Nude,#E3A8A1,5,Pink,All,Neutral
+53279b24-1826-4ba5-9723-b940b2f3b8f1,2026-01-25 12:24:27.124663+00,sh_gloss_buxom_fullon_04,gloss_buxom_fullon,Champagne,#E6D2AA,4,Gold,All,Warm
+53b2ef89-e475-444a-8fa3-ab2f5e970ea8,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_03,lip_milani_color_statement,Peach Nude,#E6A57E,3,Nude,All,Warm
+549d09a1-a835-4ee1-ab9d-185791a7d192,2026-01-25 12:24:27.124663+00,sh_blu_maybelline_fitme_blush_01,blu_maybelline_fitme_blush,Mauve,#B56576,1,Pink,All,Cool
+551e5b6d-a80f-4bae-a7e6-bb17c99d6058,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_08,lip_mac_matte,Peach Nude,#E6A57E,8,Nude,All,Warm
+56a84c65-b7a3-4654-ba5a-af6931dd156f,2026-01-25 12:24:27.124663+00,sh_hgl_milani_strobelight_02,hgl_milani_strobelight,Rose Gold,#E3A8A1,2,Pink,All,Warm
+578a9bc8-13c3-430d-9bdf-182dda098462,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_07,fnd_too_faced_born_this_way,Cocoa,#6E3F2F,7,Brown,Deep,Neutral
+57c91f52-fd94-472b-99fa-16b28a9f7e4c,2026-01-25 12:24:27.124663+00,sh_hgl_maybelline_master_chrome_04,hgl_maybelline_master_chrome,Copper Glow,#B87333,4,Bronze,All,Warm
+57d6f789-39b2-4e69-b632-7001ab54126b,2026-01-25 12:24:27.124663+00,sh_blu_essence_the_blush_01,blu_essence_the_blush,Mauve,#B56576,1,Pink,All,Cool
+580b438d-8e8d-4c6e-a5ff-343511ccab14,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_03,lip_maybelline_color_sensational_matte,Velvet Nude,#D19A8A,3,Nude,All,Warm
+58cb70b7-6690-402a-8984-a47ed8bbb944,2026-01-25 12:24:27.124663+00,sh_hgl_wetnwild_megaglo_03,hgl_wetnwild_megaglo,Copper Glow,#B87333,3,Bronze,All,Warm
+5957019d-4f2b-4d94-aa75-fc718d562d7a,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_01,lip_colourpop_lippie_stix,Berry,#7A1E3A,1,Berry,All,Cool
+597295bb-348a-4e2e-b8cc-0e6fea4f0734,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_07,lip_milani_color_statement,Dusty Pink,#B56576,7,Pink,All,Cool
+599e77d8-e195-4114-8e97-a6164c932034,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_09,lip_maybelline_superstay_matte_ink,Berry,#7A1E3A,9,Berry,All,Cool
+5a746477-515f-4d01-bc40-f9b2456e4f43,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_10,fnd_loreal_infallible_freshwear,Cocoa,#6E3F2F,10,Brown,Deep,Neutral
+5b1ea1c5-5c4d-4691-aafa-e26cf3619ba1,2026-01-25 12:24:27.124663+00,sh_mas_covergirl_lashblast_02,mas_covergirl_lashblast,Brown,#5A3A2B,2,Brown,All,Neutral
+5b1f6ed2-9d27-481d-a676-0883fa696df0,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_05,lip_milani_color_statement,Velvet Nude,#D19A8A,5,Nude,All,Warm
+5b33321d-cca3-4857-bb43-841d5f442337,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_04,gloss_nyx_butter_gloss,Peach Sheen,#F6C49E,4,Peach,All,Warm
+5bd85dcf-10c2-4833-8c06-c1b7509d9288,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_04,lip_loreal_color_riche,Dusty Pink,#B56576,4,Pink,All,Cool
+5cef8ff3-1b14-4073-b0bc-fb77501ed5e9,2026-01-25 12:24:27.124663+00,sh_gloss_buxom_fullon_05,gloss_buxom_fullon,Caramel Shine,#D9A17A,5,Brown,All,Warm
+5cfb47cc-e370-4341-8ab1-e7deae9752aa,2026-03-15 12:31:59.942631+00,deep_sky,esh_maybelline_the_nudes,deep sky,#378bae,9,Blue,All,Cool
+5e78d33f-d5a5-48cf-8d9f-557b116bc387,2026-01-25 12:24:27.124663+00,sh_blu_benefit_dandelion_04,blu_benefit_dandelion,Warm Tan,#D8A47F,4,Brown,All,Warm
+5edede9a-3a7e-417d-851e-c948986ea787,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_01,gloss_colourpop_sojuicy,Glass Clear,#F8F1EE,1,Clear,All,Neutral
+5eedfb72-8386-49e8-bf47-800c5460bfcd,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_05,fnd_loreal_true_match,Ebony,#4B2A21,5,Brown,Deep,Neutral
+5efaa82f-0bf4-421a-a531-291e4cbd1ab6,2026-01-25 12:24:27.124663+00,sh_esh_ud_naked_heat_02,esh_ud_naked_heat,Mauve Haze,#B56576,2,Pink,All,Cool
+5f449071-4067-4365-acf7-54cf07f03259,2026-03-15 12:31:59.942631+00,deep,esh_maybelline_the_nudes,Deep,#be5050,8,Red,All,Warm
+60415293-dce8-4508-84ac-c8b4891fc473,2026-01-25 12:24:27.124663+00,sh_eln_maybelline_hypereasy_01,eln_maybelline_hypereasy,Deep Brown,#5A3A2B,1,Brown,All,Neutral
+60544929-513d-4c0f-9cb1-fc51cadebdd8,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_02,lip_nyx_soft_matte,Rose Nude,#C97C7A,2,Pink,All,Warm
+609deaab-7862-4020-b3f2-6699f620b946,2026-01-25 12:24:27.124663+00,sh_eln_elf_h2o_proof_04,eln_elf_h2o_proof,Plum,#4A1F3A,4,Purple,All,Cool
+61d4b0b1-b5a3-46d9-92f2-7aeecc7efbcc,2026-01-25 12:24:27.124663+00,sh_esh_covergirl_trunaked_roses_04,esh_covergirl_trunaked_roses,Copper,#B87333,4,Bronze,All,Warm
+622a00bf-fcc9-4bc1-a7a5-d588a00d2263,2026-01-25 12:24:27.124663+00,sh_blu_nars_powder_blush_02,blu_nars_powder_blush,Rose,#C97C7A,2,Pink,All,Warm
+6278f6f5-a1da-4085-b624-f28094253d71,2026-01-25 12:24:27.124663+00,sh_esh_maybelline_the_nudes_03,esh_maybelline_the_nudes,Soft Gold,#E6C98F,3,Gold,All,Warm
+635da591-bc0a-486b-b3db-fc6b4dce42b8,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_04,fnd_maybelline_fitme_matte,Chestnut,#8D553C,4,Brown,Deep,Warm
+635db647-3be4-40bf-9aae-36b3c8d4900c,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_04,gloss_maybelline_lifter,Rose Glow,#F2B5C4,4,Pink,All,Cool
+63878c65-347d-4f0c-8fed-fed295d1c6c0,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_06,fnd_revlon_colorstay,Alabaster,#F7E6D8,6,Nude,Fair,Cool
+638f44ed-e45d-4bdf-b540-07f78d23e1d0,2026-01-25 12:24:27.124663+00,sh_esh_catrice_the_coffret_05,esh_catrice_the_coffret,Cocoa Brown,#8B5E3C,5,Brown,All,Neutral
+64a27cb0-6e21-4933-89ba-399b84a54132,2026-01-25 12:24:27.124663+00,sh_hgl_maybelline_master_chrome_01,hgl_maybelline_master_chrome,Gold,#E6C98F,1,Gold,All,Warm
+659125a9-7b0c-4984-8ea9-a4a47431be99,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_10,lip_maybelline_superstay_matte_ink,Plum,#5A2A5A,10,Purple,All,Cool
+65c6b240-da63-4113-bb07-9bd1de056e48,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_11,fnd_catrice_hd_liquid,Chestnut,#8D553C,11,Brown,Deep,Warm
+66249aa7-d33d-49d5-8f83-d207a44dccc0,2026-01-25 12:24:27.124663+00,sh_blu_elf_putty_blush_02,blu_elf_putty_blush,Rose,#C97C7A,2,Pink,All,Warm
+665ad85b-07dc-4454-820b-0202a15c27de,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_02,lip_loreal_color_riche,Velvet Nude,#D19A8A,2,Nude,All,Warm
+66b39b9a-f046-45e7-bdb2-520bf93ffa2e,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_06,lip_mac_matte,Brick Red,#9A1F2C,6,Red,All,Warm
+66b61086-a1b2-40ea-9b78-9d20d0f86491,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_09,fnd_clinique_even_better,Alabaster,#F7E6D8,9,Nude,Fair,Cool
+6758bffd-ed9c-4f06-9b0c-9c407a5bfd17,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_03,lip_revlon_super_lustrous,Peach Nude,#E6A57E,3,Nude,All,Warm
+67ce8a20-71e4-41cb-8e4b-0ae220f1ab1d,2026-01-25 12:24:27.124663+00,sh_blu_elf_putty_blush_05,blu_elf_putty_blush,Warm Tan,#D8A47F,5,Brown,All,Warm
+67d0e52c-ed24-4309-b0bb-2d813e6e319b,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_08,lip_revlon_super_lustrous,Mauve,#8A3D5C,8,Pink,All,Cool
+67fc0603-5c74-4fb8-a573-de3faea81971,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_01,lip_revlon_super_lustrous,Brick Red,#9A1F2C,1,Red,All,Warm
+688bbd83-ba01-4d3c-8c79-a3538b677ffc,2026-01-25 12:24:27.124663+00,sh_mas_nyx_ontherise_01,mas_nyx_ontherise,Brown,#5A3A2B,1,Brown,All,Neutral
+689dad73-a271-420a-8e5b-a0b6281c52b5,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_06,lip_burtsbees_tinted,Classic Red,#C1121F,6,Red,All,Neutral
+695e3908-1d39-4b1f-a76a-601248ddc548,2026-01-25 12:24:27.124663+00,sh_blu_maybelline_fitme_blush_03,blu_maybelline_fitme_blush,Warm Tan,#D8A47F,3,Brown,All,Warm
+69df8043-ecdb-4389-b4b2-fca7e5e0aeec,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_12,fnd_loreal_true_match,Natural Beige,#E3BFA7,12,Nude,Light,Neutral
+69e3f4e5-f13c-4d25-b39d-8267d4810ac5,2026-01-25 12:24:27.124663+00,sh_gloss_buxom_fullon_07,gloss_buxom_fullon,Berry Glaze,#7A1E3A,7,Berry,All,Cool
+6a827fcd-5285-44aa-b22e-48845033ba8b,2026-01-25 12:24:27.124663+00,sh_eln_revlon_colorstay_01,eln_revlon_colorstay,Deep Brown,#5A3A2B,1,Brown,All,Neutral
+6aa7962d-8a99-49cc-9c52-22987710aad3,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_06,gloss_colourpop_sojuicy,Chocolate Glaze,#8B5E3C,6,Brown,All,Warm
+6b78c68f-1730-4479-8edf-053bbe2a4901,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_01,fnd_too_faced_born_this_way,Sand,#CFA07F,1,Brown,Medium,Warm
+6c67fc77-fc13-49fc-9d98-1eea275dbb4b,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_12,fnd_elf_camo_cc,Vanilla,#EFCDB9,12,Nude,Fair,Neutral
+6ccfdc87-0c38-4f28-b278-2eab6aebacee,2026-01-25 12:24:27.124663+00,sh_eln_stila_stay_all_day_01,eln_stila_stay_all_day,Navy,#1F2A5A,1,Blue,All,Cool
+6cdd1c40-45e3-4819-a794-42a649c300c2,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_04,fnd_catrice_hd_liquid,Nude Beige,#E4BFA6,4,Nude,Light,Neutral
+6d75b917-8dcc-4350-ae26-b79b7a6bca80,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_03,lip_colourpop_lippie_stix,Deep Wine,#4A0E23,3,Berry,All,Cool
+6d8960ba-aca9-4e46-8a13-5f9a76037b97,2026-01-25 12:24:27.124663+00,sh_fnd_too_faced_born_this_way_05,fnd_too_faced_born_this_way,Chestnut,#8D553C,5,Brown,Deep,Warm
+6db0acfa-c581-4fa9-b242-d1064bb0d9ab,2026-01-25 12:24:27.124663+00,sh_esh_catrice_the_coffret_04,esh_catrice_the_coffret,Rosewood,#8A3D5C,4,Pink,All,Warm
+6e4a0b23-adf0-4be3-ac10-615db2a53117,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_07,fnd_nyx_cantstopwontstop,Ebony,#4B2A21,7,Brown,Deep,Neutral
+6efc5e17-c40c-49a5-aec7-17ea5ebcd07d,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_05,gloss_nyx_butter_gloss,Champagne,#E6D2AA,5,Gold,All,Warm
+6f271668-5f04-43f2-ba66-a9a8c60fc452,2026-01-25 12:24:27.124663+00,sh_lip_elf_cream_01,lip_elf_cream,Dusty Pink,#B56576,1,Pink,All,Cool
+7060f03f-9e54-4862-ac18-fe87d356b5a7,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_07,lip_maybelline_superstay_matte_ink,Dusty Pink,#B56576,7,Pink,All,Cool
+7125ca10-485e-4945-8f54-032aea20c335,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_04,fnd_covergirl_clean,Deep Tan,#8A533B,4,Brown,Deep,Warm
+72519a11-daad-486a-85c0-408770cf445f,2026-01-25 12:24:27.124663+00,sh_esh_milani_gilded_06,esh_milani_gilded,Warm Sand,#D8AE90,6,Brown,All,Warm
+72527d15-36f9-481c-9bbb-2e37bf9d5a22,2026-01-25 12:24:27.124663+00,sh_hgl_milani_strobelight_01,hgl_milani_strobelight,Gold,#E6C98F,1,Gold,All,Warm
+728cb259-07a9-4f25-bf5f-902bbc936c19,2026-01-25 12:24:27.124663+00,sh_mas_maybelline_skyhigh_03,mas_maybelline_skyhigh,Brown Black,#3B2A22,3,Brown,All,Neutral
+72d9af48-c805-4cb1-87ec-c4601940ca87,2026-01-25 12:24:27.124663+00,sh_esh_abh_soft_glam_05,esh_abh_soft_glam,Rosewood,#8A3D5C,5,Pink,All,Warm
+73d667e8-8c04-4a32-a20f-35c5a914cecd,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_08,lip_colourpop_lippie_stix,Brown Nude,#8B5E3C,8,Brown,All,Warm
+743de638-090d-4db8-8f10-3e568d0cd18e,2026-01-25 12:24:27.124663+00,sh_blu_burtsbees_blush_05,blu_burtsbees_blush,Peach,#F6C49E,5,Peach,All,Warm
+7487f224-e85b-4e22-a11e-b2b724c9079c,2026-01-25 12:24:27.124663+00,sh_blu_essence_the_blush_04,blu_essence_the_blush,Soft Pink,#F2A7B5,4,Pink,All,Cool
+753d6164-1e66-4c5f-9640-a92a1cb34142,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_01,fnd_loreal_infallible_freshwear,Nude Beige,#E4BFA6,1,Nude,Light,Neutral
+75725970-863b-48e4-91ce-f1048a7463e8,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_09,fnd_covergirl_clean,Porcelain,#F7E7DA,9,Nude,Fair,Cool
+75d04507-449b-4076-9a58-f2ffebe7c95d,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_05,fnd_smashbox_studio_skin,Mocha,#5A3326,5,Brown,Deep,Neutral
+767f78df-6d9a-4838-9a12-ce6154beea86,2026-01-25 12:24:27.124663+00,sh_esh_colourpop_going_coconuts_01,esh_colourpop_going_coconuts,Champagne Glow,#E6D2AA,1,Gold,All,Warm
+76838daa-a0cb-44b4-a6a4-c3b538f3da6e,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_01,lip_burtsbees_tinted,Dusty Pink,#B56576,1,Pink,All,Cool
+774dc676-173f-4f88-919a-85151ae6b0ed,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_03,lip_mac_matte,Plum,#5A2A5A,3,Purple,All,Cool
+7767e517-08b5-45fc-88a0-85cd92285ad1,2026-01-25 12:24:27.124663+00,sh_blu_clinique_cheek_pop_05,blu_clinique_cheek_pop,Mauve,#B56576,5,Pink,All,Cool
+779cad39-7f77-4308-ad1d-4402b42c50e9,2026-01-25 12:24:27.124663+00,sh_blu_burtsbees_blush_04,blu_burtsbees_blush,Rosy Nude,#E3A8A1,4,Pink,All,Neutral
+77aaba50-25ea-4a9a-8aed-e54565d5eb78,2026-01-25 12:24:27.124663+00,sh_mas_elf_big_mood_03,mas_elf_big_mood,Black,#111111,3,Black,All,Neutral
+77d59c1a-41ff-46f2-a3db-db75a346e469,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_12,fnd_revlon_colorstay,Warm Nude,#DDB294,12,Nude,Light,Warm
+77fe7226-c4ce-4974-92a8-f00a99121345,2026-01-25 12:24:27.124663+00,sh_lsh_velour_natural_01,lsh_velour_natural,Wispy,#000000,1,Black,All,Neutral
+7823ef2c-2dec-4369-a63e-270a82969380,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_08,lip_clinique_pop,Brown Nude,#8B5E3C,8,Brown,All,Warm
+789bb6c2-3286-4f7f-8311-88ca6ed98361,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_10,lip_maybelline_color_sensational_matte,Classic Red,#C1121F,10,Red,All,Neutral
+79cb9e7b-770d-45b3-84e5-2e1f11dacd53,2026-01-25 12:24:27.124663+00,sh_gloss_milani_ludicrous_04,gloss_milani_ludicrous,Red Spark,#C1121F,4,Red,All,Warm
+79f65afa-1c0e-4810-8a27-329cc2a08aa8,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_02,fnd_covergirl_clean,Caramel,#A36545,2,Brown,Tan,Warm
+7a4591d2-624e-4ff5-9e03-e6d011099ff5,2026-01-25 12:24:27.124663+00,sh_esh_covergirl_trunaked_roses_06,esh_covergirl_trunaked_roses,Soft Taupe,#CBB9A6,6,Brown,All,Cool
+7b664c1c-dbb3-426a-8dea-8a477595b598,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_10,fnd_estee_double_wear,Honey,#B57B55,10,Brown,Medium,Warm
+7b6ceda4-ddeb-4548-8b17-b7c974308be6,2026-01-25 12:24:27.124663+00,sh_eln_elf_h2o_proof_03,eln_elf_h2o_proof,Navy,#1F2A5A,3,Blue,All,Cool
+7c3472d7-c8bf-452a-86a2-29510c0bd045,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_05,lip_nyx_soft_matte,Berry,#7A1E3A,5,Berry,All,Cool
+7c4aa3cf-3e34-4c1e-a3bf-4168cc8683ad,2026-01-25 12:24:27.124663+00,sh_lsh_kiss_luxtensions_02,lsh_kiss_luxtensions,Natural,#000000,2,Black,All,Neutral
+7c7f1718-4dc2-4c8f-ab0a-571f546f8e52,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_03,lip_burtsbees_tinted,Berry,#7A1E3A,3,Berry,All,Cool
+7dce1b88-1ce6-4f88-8943-5c4be84ca9bc,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_03,fnd_loreal_true_match,Mocha,#5A3326,3,Brown,Deep,Neutral
+7e25f3dc-a43d-4fdb-ae97-3deea5e56a67,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_03,fnd_clinique_even_better,Deep Tan,#8A533B,3,Brown,Deep,Warm
+7e57d8a0-1f20-40e1-b6e0-33403c6a8044,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_10,lip_nyx_soft_matte,Coral,#F07167,10,Coral,All,Warm
+7ffe9196-b012-4ec1-81f7-f7344b69b376,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_05,lip_revlon_super_lustrous,Velvet Nude,#D19A8A,5,Nude,All,Warm
+814377ae-fbf8-434f-8d90-4272303967ba,2026-01-25 12:24:27.124663+00,sh_esh_colourpop_going_coconuts_05,esh_colourpop_going_coconuts,Warm Sand,#D8AE90,5,Brown,All,Warm
+81b78f3b-3411-4240-95b6-921e50b6d201,2026-01-25 12:24:27.124663+00,sh_eln_nyx_epic_ink_03,eln_nyx_epic_ink,Navy,#1F2A5A,3,Blue,All,Cool
+81e6e025-cc06-4169-a9e5-ce3e4efc4f13,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_04,fnd_loreal_true_match,Espresso,#4E2C23,4,Brown,Deep,Neutral
+824afaeb-c383-4aa5-9ada-3e40c62a175a,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_05,lip_maybelline_superstay_matte_ink,Velvet Nude,#D19A8A,5,Nude,All,Warm
+824edfb0-120f-4cc0-85e8-915647865959,2026-01-25 12:24:27.124663+00,sh_fnd_clinique_even_better_07,fnd_clinique_even_better,Ebony,#4B2A21,7,Brown,Deep,Neutral
+82835027-d725-4d88-b0d0-e7a93ff4fe10,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_05,gloss_elf_lip_lacquer,Champagne,#E6D2AA,5,Gold,All,Warm
+83171747-651d-4c61-aed1-db998b63bafd,2026-01-25 12:24:27.124663+00,sh_blu_elf_putty_blush_04,blu_elf_putty_blush,Berry,#7A1E3A,4,Berry,All,Cool
+8371589a-483f-4db0-a752-bafe1eae3c78,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_01,gloss_elf_lip_lacquer,Plum Shine,#5A2A5A,1,Purple,All,Cool
+838ca6a0-013a-44db-b140-eb4544732006,2026-01-25 12:24:27.124663+00,sh_esh_milani_gilded_03,esh_milani_gilded,Copper,#B87333,3,Bronze,All,Warm
+84f49acd-b8b0-43d0-9e38-2966c0c71c39,2026-01-25 12:24:27.124663+00,sh_eln_maybelline_hypereasy_02,eln_maybelline_hypereasy,Navy,#1F2A5A,2,Blue,All,Cool
+851a7e9d-cbe5-48b5-8d3b-9cfd2aa051aa,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_02,lip_maybelline_superstay_matte_ink,Coral,#F07167,2,Coral,All,Warm
+85395a83-e415-41e3-9d20-51c91df9bb98,2026-01-25 12:24:27.124663+00,sh_mas_covergirl_lashblast_01,mas_covergirl_lashblast,Brown Black,#3B2A22,1,Brown,All,Neutral
+85eb64f8-37a1-49de-8d91-012e34bc0ffe,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_01,lip_loreal_color_riche,Brown Nude,#8B5E3C,1,Brown,All,Warm
+85f52e5b-de1c-4a54-bf7b-0a9cf3ab6301,2026-01-25 12:24:27.124663+00,sh_blu_elf_putty_blush_01,blu_elf_putty_blush,Coral,#F07167,1,Coral,All,Warm
+85f9c114-3129-4a88-8ab5-3a8646b04633,2026-01-25 12:24:27.124663+00,sh_gloss_elf_lip_lacquer_04,gloss_elf_lip_lacquer,Peach Sheen,#F6C49E,4,Peach,All,Warm
+864c7908-a6b1-4fc4-8600-cb065f1fd43d,2026-01-25 12:24:27.124663+00,sh_gloss_milani_ludicrous_02,gloss_milani_ludicrous,Chocolate Glaze,#8B5E3C,2,Brown,All,Warm
+86543c0a-5ed2-4d61-b354-80261258eb33,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_06,fnd_nyx_cantstopwontstop,Espresso,#4E2C23,6,Brown,Deep,Neutral
+86aa2f5f-404d-470c-af3a-c6f4ef4ea736,2026-01-25 12:24:27.124663+00,sh_hgl_maybelline_master_chrome_03,hgl_maybelline_master_chrome,Bronze,#C08C69,3,Bronze,All,Warm
+86d212c0-249b-471c-998e-20aa979096fd,2026-01-25 12:24:27.124663+00,sh_mas_essence_lash_princess_01,mas_essence_lash_princess,Brown,#5A3A2B,1,Brown,All,Neutral
+86f25198-e368-420d-b177-85a4da761516,2026-01-25 12:24:27.124663+00,sh_esh_nyx_ultimate_03,esh_nyx_ultimate,Mauve Haze,#B56576,3,Pink,All,Cool
+8740957f-df9d-4e3b-8b92-057b8994c9e4,2026-01-25 12:24:27.124663+00,sh_blu_nars_powder_blush_04,blu_nars_powder_blush,Berry,#7A1E3A,4,Berry,All,Cool
+8776eb29-50b1-4c79-abe2-2ab6288f6184,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_03,lip_maybelline_superstay_matte_ink,Peach Nude,#E6A57E,3,Nude,All,Warm
+87d1c92d-f809-41de-911f-dc7f594ef9b6,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_08,fnd_revlon_colorstay,Vanilla,#EFCDB9,8,Nude,Fair,Neutral
+87f70e4c-2270-46cf-aba5-d029eeea855d,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_02,fnd_catrice_hd_liquid,Vanilla,#EFCDB9,2,Nude,Fair,Neutral
+884c938e-5e5e-4c90-8fba-c8ed512c3a15,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_05,lip_loreal_color_riche,Mauve,#8A3D5C,5,Pink,All,Cool
+8852d5ad-10b5-4d6e-a133-0435401faab5,2026-01-25 12:24:27.124663+00,sh_blu_burtsbees_blush_03,blu_burtsbees_blush,Soft Pink,#F2A7B5,3,Pink,All,Cool
+886b59ac-7fc7-4f0c-8494-a8125d60a157,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_01,lip_maybelline_color_sensational_matte,Peach Nude,#E6A57E,1,Nude,All,Warm
+88d67f07-cf07-416f-853e-d8e79cdc9aee,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_04,fnd_estee_double_wear,Buff,#EECBB6,4,Nude,Light,Neutral
+8933e97f-a98c-48b9-a954-17075531748b,2026-01-25 12:24:27.124663+00,sh_gloss_revlon_super_lustrous_02,gloss_revlon_super_lustrous,Peach Sheen,#F6C49E,2,Peach,All,Warm
+893dc548-e2e3-421c-a3b6-c08dd5590f9f,2026-01-25 12:24:27.124663+00,sh_mas_loreal_telescopic_01,mas_loreal_telescopic,Soft Black,#2B2B2B,1,Black,All,Neutral
+897cc125-524a-44a4-9d37-c440b1d88741,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_03,fnd_smashbox_studio_skin,Deep Tan,#8A533B,3,Brown,Deep,Warm
+89f593b5-5650-41eb-b632-c8351b19bdf4,2026-01-25 12:24:27.124663+00,sh_lsh_ardell_wispies_01,lsh_ardell_wispies,Wispy,#000000,1,Black,All,Neutral
+8a281107-1984-49eb-8303-df6ddae56575,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_04,lip_maybelline_color_sensational_matte,Rose Nude,#C97C7A,4,Pink,All,Warm
+8a5182c6-6777-4cef-8f4a-3887149ac31e,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_03,gloss_maybelline_lifter,Glass Clear,#F8F1EE,3,Clear,All,Neutral
+8cc00a78-c2e3-479f-9ff2-af04568e807c,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_09,lip_colourpop_lippie_stix,Velvet Nude,#D19A8A,9,Nude,All,Warm
+8d2fa108-8b80-40aa-8340-535de49bcd53,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_08,fnd_maybelline_fitme_matte,Espresso,#4E2C23,8,Brown,Deep,Neutral
+8d671096-b2e9-4eee-a16c-5ae5df14ea34,2026-01-25 12:24:27.124663+00,sh_esh_abh_soft_glam_01,esh_abh_soft_glam,Soft Taupe,#CBB9A6,1,Brown,All,Cool
+8d77d47c-7d1e-4e10-873b-0949a42f2bbd,2026-01-25 12:24:27.124663+00,sh_esh_catrice_the_coffret_02,esh_catrice_the_coffret,Rose Dust,#C97C7A,2,Pink,All,Warm
+8d7bde4e-a868-46c2-a1ce-cdfaff94f417,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_12,fnd_estee_double_wear,Chestnut,#8D553C,12,Brown,Deep,Warm
+8e337414-c146-4a85-98e8-bf40ae1997c6,2026-01-25 12:24:27.124663+00,sh_blu_clinique_cheek_pop_03,blu_clinique_cheek_pop,Coral,#F07167,3,Coral,All,Warm
+8ebd1797-68d4-4769-b685-6214a67ff7f5,2026-01-25 12:24:27.124663+00,sh_blu_clinique_cheek_pop_01,blu_clinique_cheek_pop,Rosy Nude,#E3A8A1,1,Pink,All,Neutral
+90652213-0aeb-45cc-8627-a58122a8b266,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_06,lip_maybelline_color_sensational_matte,Mauve,#8A3D5C,6,Pink,All,Cool
+91ba9a20-ab68-4f40-9062-c4519dcf5795,2026-01-25 12:24:27.124663+00,sh_blu_nyx_sweet_cheeks_02,blu_nyx_sweet_cheeks,Coral,#F07167,2,Coral,All,Warm
+920e30ac-77f9-4555-8fdd-bded1dafe90f,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_superstay_matte_ink_04,lip_maybelline_superstay_matte_ink,Brown Nude,#8B5E3C,4,Brown,All,Warm
+9266e44c-2e7e-4d06-999c-39ce3ae05073,2026-01-25 12:24:27.124663+00,sh_esh_elf_bite_size_05,esh_elf_bite_size,Deep Cocoa,#6D3F2F,5,Brown,All,Neutral
+932c791b-0403-4060-8a13-86e4a304e51e,2026-01-25 12:24:27.124663+00,sh_eln_elf_h2o_proof_02,eln_elf_h2o_proof,Deep Brown,#5A3A2B,2,Brown,All,Neutral
+93f3ba10-0f9a-4def-b133-4be11fa9b807,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_06,lip_milani_color_statement,Rose Nude,#C97C7A,6,Pink,All,Warm
+941e4136-8ac8-439e-82d2-a3b62ca3c8e4,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_01,lip_milani_color_statement,Brick Red,#9A1F2C,1,Red,All,Warm
+94d86724-4b4a-40da-8e16-2d8338dc0a50,2026-01-25 12:24:27.124663+00,sh_gloss_fenty_glossbomb_01,gloss_fenty_glossbomb,Rose Glow,#F2B5C4,1,Pink,All,Cool
+95186ceb-a7ad-4942-b8f9-4b133731fa25,2026-01-25 12:24:27.124663+00,sh_esh_covergirl_trunaked_roses_03,esh_covergirl_trunaked_roses,Champagne Glow,#E6D2AA,3,Gold,All,Warm
+95be4053-d5ea-4c2e-b941-50a63bdff226,2026-01-25 12:24:27.124663+00,sh_blu_benefit_dandelion_02,blu_benefit_dandelion,Mauve,#B56576,2,Pink,All,Cool
+96f8c631-4171-4a3d-8b40-44ff22bc8919,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_03,lip_loreal_color_riche,Rose Nude,#C97C7A,3,Pink,All,Warm
+98529d79-d363-401f-8246-4c50930b06b1,2026-01-25 12:24:27.124663+00,sh_gloss_revlon_super_lustrous_07,gloss_revlon_super_lustrous,Red Spark,#C1121F,7,Red,All,Warm
+986a1ddd-828e-4dce-94c0-32428030ca2c,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_08,fnd_covergirl_clean,Ebony,#4B2A21,8,Brown,Deep,Neutral
+988650f2-9a13-4b76-956d-26c841eeacd3,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_06,lip_nyx_soft_matte,Plum,#5A2A5A,6,Purple,All,Cool
+98e5e050-6e15-4b3e-801c-a6f1babcb71a,2026-01-25 12:24:27.124663+00,sh_blu_nars_powder_blush_03,blu_nars_powder_blush,Mauve,#B56576,3,Pink,All,Cool
+99b6d0a5-ad68-4464-b1ae-9cc53fc515b0,2026-01-25 12:24:27.124663+00,sh_blu_nars_powder_blush_05,blu_nars_powder_blush,Warm Tan,#D8A47F,5,Brown,All,Warm
+99e7f9d5-3b45-4c9c-af9c-78cb55c875a8,2026-01-25 12:24:27.124663+00,sh_lip_revlon_super_lustrous_10,lip_revlon_super_lustrous,Plum,#5A2A5A,10,Purple,All,Cool
+9a2ab33a-e3fa-4e24-b0ef-298dc804c981,2026-01-25 12:24:27.124663+00,sh_lip_wetnwild_megalast_02,lip_wetnwild_megalast,Brick Red,#9A1F2C,2,Red,All,Warm
+9a9abeda-92f3-4091-a8d3-b96f733ee493,2026-01-25 12:24:27.124663+00,sh_lsh_kiss_ritzy_02,lsh_kiss_ritzy,Volume,#000000,2,Black,All,Neutral
+9c52e680-a221-4cda-88f0-8690aefa4b01,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_02,fnd_smashbox_studio_skin,Chestnut,#8D553C,2,Brown,Deep,Warm
+9cd0f8f3-326a-43a4-bb33-9f1959569b3b,2026-01-25 12:24:27.124663+00,sh_mas_loreal_telescopic_02,mas_loreal_telescopic,Brown Black,#3B2A22,2,Brown,All,Neutral
+9d0af2a4-60f2-45db-8b50-3d5f1f28f935,2026-01-25 12:24:27.124663+00,sh_mas_loreal_telescopic_03,mas_loreal_telescopic,Brown,#5A3A2B,3,Brown,All,Neutral
+9d1bd452-0ce7-4be1-a6d8-647b8cf6451e,2026-01-25 12:24:27.124663+00,sh_esh_nyx_ultimate_04,esh_nyx_ultimate,Rosewood,#8A3D5C,4,Pink,All,Warm
+9d2242e2-1ff2-4faa-b978-e91c15cb7f36,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_true_match_09,fnd_loreal_true_match,Vanilla,#EFCDB9,9,Nude,Fair,Neutral
+9d894f0f-4a23-4699-86c8-fd8f0a9127c2,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_09,lip_milani_color_statement,Berry,#7A1E3A,9,Berry,All,Cool
+9dedfd6c-1dea-446d-b9f2-8b3e53901c3b,2026-01-25 12:24:27.124663+00,sh_esh_nyx_ultimate_06,esh_nyx_ultimate,Deep Cocoa,#6D3F2F,6,Brown,All,Neutral
+9e418da7-8eff-41a7-b225-8ac02cbf73a9,2026-01-25 12:24:27.124663+00,sh_lsh_kiss_luxtensions_01,lsh_kiss_luxtensions,Doll Eye,#000000,1,Black,All,Neutral
+9e666c3e-b1f9-47ac-a534-af6605757348,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_07,fnd_loreal_infallible_freshwear,Caramel,#A36545,7,Brown,Tan,Warm
+9f06ea59-a576-4f4f-9ad2-a1bf8ea670c9,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_09,lip_mac_matte,Brown Nude,#8B5E3C,9,Brown,All,Warm
+a10041df-159c-4570-aa7d-d8e326db5a87,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_05,lip_mac_matte,Classic Red,#C1121F,5,Red,All,Neutral
+a1f6e65a-48ab-4087-830c-4849217230c4,2026-01-25 12:24:27.124663+00,sh_fnd_estee_double_wear_08,fnd_estee_double_wear,Sand,#CFA07F,8,Brown,Medium,Warm
+a4fa6b3a-30b3-4033-b15d-0d0e8592133b,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_08,fnd_catrice_hd_liquid,Golden Beige,#C18E69,8,Brown,Medium,Warm
+a517d95c-e803-4025-83b7-09efe8a6a459,2026-01-25 12:24:27.124663+00,sh_gloss_maybelline_lifter_06,gloss_maybelline_lifter,Champagne,#E6D2AA,6,Gold,All,Warm
+a5e96248-69a9-422f-9f89-621fcfba2045,2026-01-25 12:24:27.124663+00,sh_esh_catrice_the_coffret_01,esh_catrice_the_coffret,Warm Sand,#D8AE90,1,Brown,All,Warm
+a603c7ea-66cf-485a-97ce-77abfc563d05,2026-01-25 12:24:27.124663+00,sh_eln_stila_stay_all_day_03,eln_stila_stay_all_day,Jet Black,#111111,3,Black,All,Neutral
+a61964a1-0359-4006-81bc-6f1492356448,2026-01-25 12:24:27.124663+00,sh_gloss_revlon_super_lustrous_05,gloss_revlon_super_lustrous,Chocolate Glaze,#8B5E3C,5,Brown,All,Warm
+a79c3558-30dd-4e6a-a9f2-b6ad7a810a2d,2026-03-15 12:43:17.287319+00,pinkyyy,esh_colourpop_going_coconuts,Pinkyyy,#ce5099,7,Pink,All,Cool
+a85b4c3e-5951-4814-89b1-3b8dcd5a4f68,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_10,fnd_revlon_colorstay,Nude Beige,#E4BFA6,10,Nude,Light,Neutral
+a86f05f0-fc29-448b-b3a1-ad69b553e30a,2026-01-25 12:24:27.124663+00,sh_blu_clinique_cheek_pop_02,blu_clinique_cheek_pop,Peach,#F6C49E,2,Peach,All,Warm
+a89e776b-6a24-44b2-9179-94c88447c255,2026-01-25 12:24:27.124663+00,sh_gloss_milani_ludicrous_08,gloss_milani_ludicrous,Peach Sheen,#F6C49E,8,Peach,All,Warm
+a8d8aba7-704e-4daf-af28-f860706af783,2026-01-25 12:24:27.124663+00,sh_gloss_nyx_butter_gloss_07,gloss_nyx_butter_gloss,Chocolate Glaze,#8B5E3C,7,Brown,All,Warm
+a8e6aff3-15bf-4bec-8351-09da5027e521,2026-01-25 12:24:27.124663+00,sh_lsh_ardell_natural_110_02,lsh_ardell_natural_110,Volume,#000000,2,Black,All,Neutral
+a8f0081f-2933-49f6-bc6e-9f045ef34eb6,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_06,fnd_smashbox_studio_skin,Espresso,#4E2C23,6,Brown,Deep,Neutral
+a9c30834-fc8c-4b8a-b5e9-858faa920484,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_03,gloss_colourpop_sojuicy,Peach Sheen,#F6C49E,3,Peach,All,Warm
+a9edffe0-a98f-4c1b-86b8-2cd8ccc41c0b,2026-01-25 12:24:27.124663+00,sh_gloss_buxom_fullon_06,gloss_buxom_fullon,Chocolate Glaze,#8B5E3C,6,Brown,All,Warm
+aa8dc90f-f116-4370-9ac7-dc5cbbd1b3e6,2026-01-25 12:24:27.124663+00,sh_gloss_buxom_fullon_08,gloss_buxom_fullon,Red Spark,#C1121F,8,Red,All,Warm
+aac687a0-9676-402e-b624-2ce8141e6120,2026-01-25 12:24:27.124663+00,sh_lip_clinique_pop_01,lip_clinique_pop,Berry,#7A1E3A,1,Berry,All,Cool
+ab1d261f-7899-44df-a4e6-a320a7147052,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_11,fnd_nyx_cantstopwontstop,Vanilla,#EFCDB9,11,Nude,Fair,Neutral
+ab3ad6c3-05c2-4eac-868f-1fdb059f4480,2026-01-25 12:24:27.124663+00,sh_mas_milani_highly_rated_01,mas_milani_highly_rated,Soft Black,#2B2B2B,1,Black,All,Neutral
+ab8a8180-30de-44b4-b539-a5ecaa7bb0e0,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_10,lip_mac_matte,Velvet Nude,#D19A8A,10,Nude,All,Warm
+abe66bc1-1f9d-4dc1-b9e8-efff25d4b705,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_09,lip_burtsbees_tinted,Peach Nude,#E6A57E,9,Nude,All,Warm
+ac1099e3-6c87-4116-9018-8778c66fd328,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_07,lip_burtsbees_tinted,Brick Red,#9A1F2C,7,Red,All,Warm
+ac859ac6-5228-49f1-94d9-7d40639d9fad,2026-01-25 12:24:27.124663+00,sh_blu_benefit_dandelion_05,blu_benefit_dandelion,Soft Pink,#F2A7B5,5,Pink,All,Cool
+acec0022-2b70-4c2d-a7a8-92c634805bb7,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_01,lip_mac_matte,Mauve,#8A3D5C,1,Pink,All,Cool
+ad0be7d6-1c53-4d6c-a7ef-c6a807cd837e,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_04,fnd_revlon_colorstay,Ebony,#4B2A21,4,Brown,Deep,Neutral
+ad26d7b2-96a3-4af3-84d4-5893ccc79c1a,2026-01-25 12:24:27.124663+00,sh_fnd_covergirl_clean_05,fnd_covergirl_clean,Cocoa,#6E3F2F,5,Brown,Deep,Neutral
+adda9cd3-708b-4b7a-81d5-555d5fca77a2,2026-01-25 12:24:27.124663+00,sh_lip_loreal_color_riche_10,lip_loreal_color_riche,Brick Red,#9A1F2C,10,Red,All,Warm
+ae76b0a7-f8cc-4ada-919d-0143d46dd5c6,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_09,fnd_nyx_cantstopwontstop,Alabaster,#F7E6D8,9,Nude,Fair,Cool
+ae9bb906-77cf-442c-8c7e-71f91f82d75b,2026-01-25 12:24:27.124663+00,sh_lip_elf_cream_05,lip_elf_cream,Deep Wine,#4A0E23,5,Berry,All,Cool
+af60271a-9779-489d-beab-d741a016bd3f,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_03,fnd_revlon_colorstay,Espresso,#4E2C23,3,Brown,Deep,Neutral
+af92a10d-2421-4974-9dcc-6af2a46701e4,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_02,gloss_colourpop_sojuicy,Rose Glow,#F2B5C4,2,Pink,All,Cool
+afb63516-dc83-4ba4-a31e-66a89ead70ae,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_04,lip_milani_color_statement,Brown Nude,#8B5E3C,4,Brown,All,Warm
+b042a52f-3e4e-467d-986c-2eb476f6e181,2026-01-25 12:24:27.124663+00,sh_gloss_milani_ludicrous_05,gloss_milani_ludicrous,Plum Shine,#5A2A5A,5,Purple,All,Cool
+b0b738a4-6c68-4cfb-83b8-2da68a773309,2026-01-25 12:24:27.124663+00,sh_hgl_elf_halo_glow_01,hgl_elf_halo_glow,Gold,#E6C98F,1,Gold,All,Warm
+b1c3b5d0-8a1e-4ba2-adca-40d8dd163df5,2026-01-25 12:24:27.124663+00,sh_lip_maybelline_color_sensational_matte_07,lip_maybelline_color_sensational_matte,Berry,#7A1E3A,7,Berry,All,Cool
+b2989463-3742-4afd-b21e-fdb3f884242a,2026-01-25 12:24:27.124663+00,sh_gloss_revlon_super_lustrous_01,gloss_revlon_super_lustrous,Rose Glow,#F2B5C4,1,Pink,All,Cool
+b2b0914e-029b-44ea-a3d7-f5fe51b8469d,2026-01-25 12:24:27.124663+00,sh_hgl_wetnwild_megaglo_01,hgl_wetnwild_megaglo,Rose Gold,#E3A8A1,1,Pink,All,Warm
+b499608a-fa02-4e74-b7fc-c507e3b230c7,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_08,lip_burtsbees_tinted,Coral,#F07167,8,Coral,All,Warm
+b4fa99c3-4708-47ae-a34d-31ca76029d3c,2026-01-25 12:24:27.124663+00,sh_fnd_catrice_hd_liquid_01,fnd_catrice_hd_liquid,Ivory,#F3D7C4,1,Nude,Fair,Neutral
+b6ba530a-9eda-465b-ae77-2de835b8b006,2026-01-25 12:24:27.124663+00,sh_gloss_buxom_fullon_03,gloss_buxom_fullon,Peach Sheen,#F6C49E,3,Peach,All,Warm
+b7da49e2-02c2-4f85-8ea3-ca77224966b7,2026-01-25 12:24:27.124663+00,sh_lip_elf_cream_09,lip_elf_cream,Peach Nude,#E6A57E,9,Nude,All,Warm
+b81b16ee-ffe8-40e7-95f4-63ccf7306c94,2026-01-25 12:24:27.124663+00,sh_fnd_elf_camo_cc_11,fnd_elf_camo_cc,Ivory,#F3D7C4,11,Nude,Fair,Neutral
+b9103ea9-3f16-4357-ac87-eb7bf0c9a531,2026-01-25 12:24:27.124663+00,sh_blu_wetnwild_coloricon_02,blu_wetnwild_coloricon,Soft Pink,#F2A7B5,2,Pink,All,Cool
+b9b417df-a253-4599-a3f6-a0dedbf16d7a,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_04,lip_nyx_soft_matte,Mauve,#8A3D5C,4,Pink,All,Cool
+b9b4f754-6892-4cab-8ba6-8d2e080837e4,2026-01-25 12:24:27.124663+00,sh_eln_loreal_superstar_liquid_04,eln_loreal_superstar_liquid,Deep Brown,#5A3A2B,4,Brown,All,Neutral
+ba169b9c-0ba4-4f09-ac52-79f74a874ef8,2026-01-25 12:24:27.124663+00,sh_lip_elf_cream_02,lip_elf_cream,Mauve,#8A3D5C,2,Pink,All,Cool
+ba56aa54-aa89-4650-979e-ffc7ec0e79c9,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_09,fnd_maybelline_fitme_matte,Ebony,#4B2A21,9,Brown,Deep,Neutral
+ba86d203-5f2e-4d0e-bcd3-2c59e0f05700,2026-01-25 12:24:27.124663+00,sh_esh_too_faced_chocolate_03,esh_too_faced_chocolate,Warm Sand,#D8AE90,3,Brown,All,Warm
+ba89d491-572f-40a0-ba93-1ecf3fe57b34,2026-01-25 12:24:27.124663+00,sh_fnd_smashbox_studio_skin_09,fnd_smashbox_studio_skin,Alabaster,#F7E6D8,9,Nude,Fair,Cool
+bae61861-0314-4dc0-8eb0-89382e484247,2026-01-25 12:24:27.124663+00,sh_lip_colourpop_lippie_stix_05,lip_colourpop_lippie_stix,Brick Red,#9A1F2C,5,Red,All,Warm
+bbda5144-fc40-492c-901f-3ddd4e3a18d3,2026-01-25 12:24:27.124663+00,sh_fnd_loreal_infallible_freshwear_03,fnd_loreal_infallible_freshwear,Warm Nude,#DDB294,3,Nude,Light,Warm
+bc7a8699-9c97-482b-bd42-bfb7fde980ca,2026-01-25 12:24:27.124663+00,sh_lip_mac_matte_07,lip_mac_matte,Coral,#F07167,7,Coral,All,Warm
+bca48ae7-2420-40ee-b267-5104ebe87065,2026-01-25 12:24:27.124663+00,sh_fnd_maybelline_fitme_matte_06,fnd_maybelline_fitme_matte,Cocoa,#6E3F2F,6,Brown,Deep,Neutral
+bcbe1df9-d895-4789-aa6b-deb27a1210d1,2026-01-25 12:24:27.124663+00,sh_fnd_revlon_colorstay_02,fnd_revlon_colorstay,Mocha,#5A3326,2,Brown,Deep,Neutral
+bec630e8-3268-4606-a294-12e1355c2985,2026-01-25 12:24:27.124663+00,sh_eln_wetnwild_breakup_04,eln_wetnwild_breakup,Jet Black,#111111,4,Black,All,Neutral
+bf32d958-22d6-4a10-8fca-a7d6c07744f8,2026-01-25 12:24:27.124663+00,sh_hgl_fenty_killah_watt_02,hgl_fenty_killah_watt,Gold,#E6C98F,2,Gold,All,Warm
+bf6ebb14-26ea-43ff-90f6-9d24d4213865,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_09,lip_nyx_soft_matte,Brick Red,#9A1F2C,9,Red,All,Warm
+bfc6faa5-9d63-47b9-9b88-e2b7d1728103,2026-01-25 12:24:27.124663+00,sh_gloss_colourpop_sojuicy_04,gloss_colourpop_sojuicy,Champagne,#E6D2AA,4,Gold,All,Warm
+bfce55c3-9a1c-44e1-98d0-c4a904439da3,2026-01-25 12:24:27.124663+00,sh_eln_maybelline_hypereasy_03,eln_maybelline_hypereasy,Plum,#4A1F3A,3,Purple,All,Cool
+c06113c8-d155-476f-9774-2bead87ebe7d,2026-01-25 12:24:27.124663+00,sh_blu_benefit_dandelion_03,blu_benefit_dandelion,Berry,#7A1E3A,3,Berry,All,Cool
+c080eb6c-47a2-47cc-8e17-a612719120b7,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_03,lip_nyx_soft_matte,Dusty Pink,#B56576,3,Pink,All,Cool
+c1651cc5-0014-497f-9e8b-68c62e3f67ee,2026-01-25 12:24:27.124663+00,sh_mas_covergirl_lashblast_03,mas_covergirl_lashblast,Black,#111111,3,Black,All,Neutral
+c1e9c3d0-46bc-46d1-ace2-7961451df83e,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_08,lip_milani_color_statement,Mauve,#8A3D5C,8,Pink,All,Cool
+c220d4f3-8720-43cd-aff4-7cc50799b2ac,2026-01-25 12:24:27.124663+00,sh_mas_essence_lash_princess_02,mas_essence_lash_princess,Black,#111111,2,Black,All,Neutral
+c24ba3de-ceab-4b2e-9d5b-c04fba875db5,2026-01-25 12:24:27.124663+00,sh_blu_nyx_sweet_cheeks_05,blu_nyx_sweet_cheeks,Berry,#7A1E3A,5,Berry,All,Cool
+c2e33602-37b6-4065-a14c-2866cc21222b,2026-01-25 12:24:27.124663+00,sh_hgl_becca_shimmering_01,hgl_becca_shimmering,Bronze,#C08C69,1,Bronze,All,Warm
+c34a791d-09ee-4f3a-812d-6db01d3b0f75,2026-01-25 12:24:27.124663+00,sh_lip_nyx_soft_matte_08,lip_nyx_soft_matte,Classic Red,#C1121F,8,Red,All,Neutral
+c380cd01-8e88-4169-ada9-5f89ca0ada9b,2026-01-25 12:24:27.124663+00,sh_hgl_becca_shimmering_03,hgl_becca_shimmering,Pearl,#F7EFEA,3,Pink,All,Cool
+c40af9a2-1948-4094-a73b-067e8c3650ec,2026-01-25 12:24:27.124663+00,sh_esh_colourpop_going_coconuts_03,esh_colourpop_going_coconuts,Vanilla Cream,#F2E6D8,3,Nude,All,Warm
+c45b1b47-9bf1-428a-8aae-c16e699f11c7,2026-01-25 12:24:27.124663+00,sh_fnd_nyx_cantstopwontstop_04,fnd_nyx_cantstopwontstop,Cocoa,#6E3F2F,4,Brown,Deep,Neutral
+c47edfbe-b4f2-43c4-bd10-0ac64c4fc818,2026-01-25 12:24:27.124663+00,sh_eln_loreal_superstar_liquid_01,eln_loreal_superstar_liquid,Jet Black,#111111,1,Black,All,Neutral
+c4b8b9c6-9746-42b1-8f78-3b7c9b27abbb,2026-01-25 12:24:27.124663+00,sh_blu_milani_baked_blush_01,blu_milani_baked_blush,Warm Tan,#D8A47F,1,Brown,All,Warm
+c4fc8752-429f-467a-8cba-28b720a1442b,2026-01-25 12:24:27.124663+00,sh_lip_milani_color_statement_10,lip_milani_color_statement,Plum,#5A2A5A,10,Purple,All,Cool
+c594a0b2-819c-41bf-8a7a-cc1ec5f9dbf8,2026-01-25 12:24:27.124663+00,sh_lip_wetnwild_megalast_05,lip_wetnwild_megalast,Brown Nude,#8B5E3C,5,Brown,All,Warm
+c5db312d-4471-4462-910c-071d2bc94195,2026-01-25 12:24:27.124663+00,sh_esh_maybelline_the_nudes_01,esh_maybelline_the_nudes,Deep Cocoa,#6D3F2F,1,Brown,All,Neutral
+c6e195a9-c8ed-4425-9821-e9b870a7474d,2026-01-25 12:24:27.124663+00,sh_lip_burtsbees_tinted_02,lip_burtsbees_tinted,Mauve,#8A3D5C,2,Pink,All,Cool
+c738426d-469f-4a28-9578-695642073c64,2026-01-25 12:24:27.124663+00,sh_blu_wetnwild_coloricon_01,blu_wetnwild_coloricon,Warm Tan,#D8A47F,1,Brown,All,Warm

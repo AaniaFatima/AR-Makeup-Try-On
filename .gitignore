@@ -43,3 +43,25 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+# Flutter / Android build files
+build/
+android/build/
+android/app/build/
+
+# Gradle
+.gradle/
+
+# Local binaries
+*.zip
+*.hprof
+
+# Generated files
+**/generated_plugin_registrant.*
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+key.properties

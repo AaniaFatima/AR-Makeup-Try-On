@@ -1,11 +1,17 @@
 package com.example.makeup_tryon
 
 import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.android.FlutterActivityLaunchConfigs.BackgroundMode
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
+
+    // ── DeepAR EGL fix ────────────────────────────────────────────────────
+    override fun getBackgroundMode(): BackgroundMode {
+        return BackgroundMode.transparent
+    }
 
     private val CHANNEL = "makeup_tryon/face_mesh"
     private var faceMeshRunner: FaceMeshRunner? = null
@@ -29,16 +35,12 @@ class MainActivity : FlutterActivity() {
                         }
 
                         try {
-                            // ✅ lazy init (only when first frame arrives)
                             val runner = faceMeshRunner ?: FaceMeshRunner(applicationContext).also {
                                 faceMeshRunner = it
                             }
-
                             val output = runner.detectNv21(bytes, width, height, rotation)
                             result.success(output)
-
                         } catch (e: Throwable) {
-                            // ✅ now it won't crash the app; you'll see the error in Flutter
                             result.error("FACE_MESH_INIT_OR_DETECT_ERROR", e.message, e.toString())
                         }
                     }
